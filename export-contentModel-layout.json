@@ -1,0 +1,11 @@
+{
+    "spaceId": "",
+    "environmentId": "master",
+    "managementToken": "",
+    "queryEntries": "sys.id=layout",
+    "skipContentModel": "false",
+    "skipContent": "true",
+    "skipRoles": "true",
+    "skipTags": "true",
+    "skipWebhooks": "true"
+}
