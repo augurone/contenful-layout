@@ -1,5 +1,5 @@
 # Layouts from Contentful model
-![ComplexLayout](https://git@github.com/augurone/contenful-layout/blob/main/LayoutContainerExample.png)
+![ComplexLayout](https://raw.githubusercontent.com/augurone/contenful-layout/refs/heads/main/LayoutContainerExample.png)
 
 
 The above illustrates the benefit of making layout content. One main container containing an arrangement of other containers and atomic components are used to construct this whole layout. Where practical, this pattern should be used. Any box-model settings apply only to the direct descendants of the container, and therefore be conscientious of depth when constructing new page layoutouts.
