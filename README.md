@@ -11,10 +11,10 @@ This reads the layout config from a contentful component, and standardizes the c
 This receives the layoutConfig from layoutConfigs.js, and maps it to a string that is the css class declaration to be applied to the current component (container or atomic component).
 
 ## Importable Layout Model for Contentful
-- contentful-export_layoutModel_2024-06.json: importable Model JSON for the layout models. 
+- contentful-export_layoutModel_2024-06.json: an export from the contentful CLI
   - [Contentful Layout Models JSON](https://github.com/user-attachments/files/16397475/contentful-export_layoutModel_2024-06.json)
   - `contentful space export --config ./migration-configs/export-contentModel-layout.json`
-- Setting up CLI
+- Setting up CLI, and importing the layout Model
   - npm install -g contentful-cli
   - `contentful space import --config ./import-contentModel-layout.json`
     - This has will import all the models and editor configs for the layout model. 
