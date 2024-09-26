@@ -3,5 +3,5 @@
     "environmentId": "master",
     "managementToken": "",
     "content-model-only": true,
-    "contentFile": "./contentful-export_layoutModel_2024-06.json"
+    "contentFile": "./contentful-layout-contentype_editorinterfaces.json"
 }
