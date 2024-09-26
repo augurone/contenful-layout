@@ -12,7 +12,7 @@ This receives the layoutConfig from layoutConfigs.js, and maps it to a string th
 
 ## Importable Layout Model for Contentful
 - contentful-export_layoutModel_2024-06.json: an export from the contentful CLI
-  - [Contentful Layout Models JSON](https://github.com/user-attachments/files/16397475/contentful-export_layoutModel_2024-06.json)
+  - [Contentful Layout Models JSON](https://github.com/augurone/contenful-layout/blob/main/contentful-layout-contentype_editorinterfaces.json)
   - `contentful space export --config ./migration-configs/export-contentModel-layout.json`
 - Setting up CLI, and importing the layout Model
   - npm install -g contentful-cli
