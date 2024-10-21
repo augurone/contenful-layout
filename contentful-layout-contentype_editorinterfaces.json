@@ -12,7 +12,7 @@
         "id": "layout",
         "type": "ContentType",
         "createdAt": "2023-11-13T19:54:29.686Z",
-        "updatedAt": "2024-06-29T20:42:50.077Z",
+        "updatedAt": "2024-10-21T01:03:12.061Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 55,
-        "publishedAt": "2024-06-29T20:42:50.077Z",
+        "publishedVersion": 81,
+        "publishedAt": "2024-10-21T01:03:12.061Z",
         "firstPublishedAt": "2023-11-13T19:54:29.933Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "7MIl0BcR3Ah8fY4zLnOzsH"
           }
         },
-        "publishedCounter": 28,
-        "version": 56,
+        "publishedCounter": 41,
+        "version": 82,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -81,10 +81,7 @@
             "validations": [
               {
                 "linkContentType": [
-                  "dimensionsWidth",
-                  "layoutDimensionsBasis",
-                  "layoutDimensionsMaxWidth",
-                  "layoutDimensionsMinWidth"
+                  "layoutDimensionAttribute"
                 ]
               }
             ],
@@ -133,36 +130,10 @@
         {
           "id": "layoutPosition",
           "name": "Item Position",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "layoutPositionRelative",
-                "layoutPositionAbsolute",
-                "layoutPositionFixed",
-                "layoutPositionSticky"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "padding",
-          "name": "Padding",
           "type": "Array",
           "localized": false,
           "required": false,
           "validations": [
-            {
-              "size": {
-                "min": 0,
-                "max": 3
-              }
-            }
           ],
           "disabled": false,
           "omitted": false,
@@ -171,9 +142,29 @@
             "validations": [
               {
                 "linkContentType": [
-                  "layoutPadding",
-                  "layoutPaddingTablet",
-                  "layoutPaddingDesktop"
+                  "layoutPositionAttribute"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "padding",
+          "name": "Padding",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutPaddingAttribute"
                 ]
               }
             ],
@@ -187,12 +178,6 @@
           "localized": false,
           "required": false,
           "validations": [
-            {
-              "size": {
-                "min": 0,
-                "max": 3
-              }
-            }
           ],
           "disabled": false,
           "omitted": false,
@@ -201,9 +186,7 @@
             "validations": [
               {
                 "linkContentType": [
-                  "layoutMarginDefault",
-                  "layoutMarginTablet",
-                  "layoutMarginDesktop"
+                  "layoutMarginAttribute"
                 ]
               }
             ],
@@ -285,1061 +268,6 @@
           "localized": false,
           "required": false,
           "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPaddingTablet",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:30.369Z",
-        "updatedAt": "2024-05-06T19:43:59.333Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2024-05-06T19:43:59.333Z",
-        "firstPublishedAt": "2023-11-13T19:54:30.732Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPaddingTablet"
-      },
-      "displayField": "paddingTablet",
-      "name": "Layout: Padding - Tablet",
-      "description": "Reusable Padding Model. ",
-      "fields": [
-        {
-          "id": "paddingTablet",
-          "name": "Tablet Padding",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Tablet Padding"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "padding",
-          "name": "Tablet Padding",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingTop",
-          "name": "Tablet Padding Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingRight",
-          "name": "Tablet Padding Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingBottom",
-          "name": "Tablet Padding Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingLeft",
-          "name": "Tablet Padding Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPadding",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:31.124Z",
-        "updatedAt": "2024-05-06T19:38:38.552Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2024-05-06T19:38:38.552Z",
-        "firstPublishedAt": "2023-11-13T19:54:31.374Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPadding"
-      },
-      "displayField": "paddingDefault",
-      "name": "Layout: Padding - Mobile(default)",
-      "description": "Reusable Padding Model.",
-      "fields": [
-        {
-          "id": "paddingDefault",
-          "name": "Mobile (default) Padding",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Mobile (default) Padding"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "padding",
-          "name": "Mobile(default) Padding",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingTop",
-          "name": "Mobile(default) Padding Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingRight",
-          "name": "Mobile (default) Padding Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingBottom",
-          "name": "Mobile (default) Padding Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingLeft",
-          "name": "Mobile (default) Padding Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPaddingDesktop",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:32.118Z",
-        "updatedAt": "2024-05-08T20:37:02.540Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2024-05-08T20:37:02.540Z",
-        "firstPublishedAt": "2023-11-13T19:54:32.357Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPaddingDesktop"
-      },
-      "displayField": "paddingDesktop",
-      "name": "Layout: Padding - Desktop",
-      "description": "Reusable Padding Model.",
-      "fields": [
-        {
-          "id": "paddingDesktop",
-          "name": "Desktop Padding",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Desktop Padding"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "padding",
-          "name": "Desktop Padding",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingTop",
-          "name": "Desktop Padding Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingRight",
-          "name": "Desktop Padding Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingBottom",
-          "name": "Desktop Padding Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "paddingLeft",
-          "name": "Desktop Padding Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutMarginDefault",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:33.339Z",
-        "updatedAt": "2024-07-12T23:57:17.219Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 11,
-        "publishedAt": "2024-07-12T23:57:17.219Z",
-        "firstPublishedAt": "2023-11-13T19:54:33.551Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 6,
-        "version": 12,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginDefault"
-      },
-      "displayField": "marginDefault",
-      "name": "Layout: Margin - Mobile(default)",
-      "description": "Reusable Margin Model.",
-      "fields": [
-        {
-          "id": "marginDefault",
-          "name": "Mobile (default) Margin",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginXAuto",
-          "name": "Horizontal Margin Balanced (item centered)",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTopAuto",
-          "name": "Margin Top Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeftAuto",
-          "name": "Margin Left Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "margin",
-          "name": "Mobile(default) Margin",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTop",
-          "name": "Mobile(default) Margin Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginRight",
-          "name": "Mobile (default) Margin Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginBottom",
-          "name": "Mobile (default) Margin Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeft",
-          "name": "Mobile (default) Margin Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
           ],
           "disabled": false,
           "omitted": false
@@ -1452,599 +380,6 @@
           ],
           "defaultValue": {
             "en-US": "stretch"
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPositionSticky",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:35.730Z",
-        "updatedAt": "2024-09-18T22:17:37.509Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 21,
-        "publishedAt": "2024-09-18T22:17:37.509Z",
-        "firstPublishedAt": "2023-11-13T19:54:35.929Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 11,
-        "version": 22,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionSticky"
-      },
-      "displayField": "positionSticky",
-      "name": "Layout: Position - Sticky",
-      "description": "Sticky Positioning Options",
-      "fields": [
-        {
-          "id": "positionSticky",
-          "name": "Sticky Postion",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Sticky Position"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "top",
-          "name": "Top",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "0",
-                "0.5",
-                "1",
-                "1.5",
-                "2",
-                "2.5",
-                "3",
-                "3.5",
-                "4",
-                "4.5",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12",
-                "14",
-                "16",
-                "20",
-                "24",
-                "28",
-                "32",
-                "36",
-                "40",
-                "52",
-                "56",
-                "60",
-                "64",
-                "68",
-                "72",
-                "76",
-                "80",
-                "84",
-                "88",
-                "92",
-                "96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "topValuePositiveOrNegative",
-          "name": "Top Value Positive or Negative",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "+",
-                "-"
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": "+"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "bottom",
-          "name": "Bottom",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "0",
-                "0.5",
-                "1",
-                "1.5",
-                "2",
-                "2.5",
-                "3",
-                "3.5",
-                "4",
-                "5",
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12",
-                "14",
-                "16",
-                "20",
-                "24",
-                "28",
-                "32",
-                "36",
-                "40",
-                "44",
-                "48",
-                "52",
-                "56",
-                "60",
-                "64",
-                "68",
-                "72",
-                "76",
-                "80",
-                "84",
-                "88",
-                "92",
-                "96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "bottomValuePositiveOrNegative",
-          "name": "Bottom Value Positive or Negative",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "+",
-                "-"
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": "+"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "stacking",
-          "name": "Stacking (z-index)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "0",
-                "10",
-                "20",
-                "30",
-                "40",
-                "50"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPositionRelative",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:36.258Z",
-        "updatedAt": "2024-09-23T18:26:41.528Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-09-23T18:26:41.528Z",
-        "firstPublishedAt": "2023-11-13T19:54:36.485Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionRelative"
-      },
-      "displayField": "positionRelative",
-      "name": "Layout: Position - Relative",
-      "description": "Creates a context for children, all positioning and z-index are relative to this item.",
-      "fields": [
-        {
-          "id": "positionRelative",
-          "name": "Relative",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Relative"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "stacking",
-          "name": "Stacking (z-index)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                10,
-                20,
-                30,
-                40,
-                50
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPositionFixed",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:36.965Z",
-        "updatedAt": "2023-11-13T19:54:37.179Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-11-13T19:54:37.179Z",
-        "firstPublishedAt": "2023-11-13T19:54:37.179Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionFixed"
-      },
-      "displayField": "positionFixed",
-      "name": "Layout: Position - Fixed",
-      "description": "Fixed Positioning Options",
-      "fields": [
-        {
-          "id": "positionFixed",
-          "name": "Fixed Position",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Fixed Position"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "top",
-          "name": "Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "right",
-          "name": "Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "bottom",
-          "name": "Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "left",
-          "name": "Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "stacking",
-          "name": "Stacking (z-index)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "range": {
-                "min": 0,
-                "max": 13
-              }
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutPositionAbsolute",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:37.723Z",
-        "updatedAt": "2024-06-27T06:31:10.341Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2024-06-27T06:31:10.341Z",
-        "firstPublishedAt": "2023-11-13T19:54:38.061Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 3,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionAbsolute"
-      },
-      "displayField": "positionAbsolute",
-      "name": " Layout: Position - Absolute",
-      "description": "Absolute Positioning Options",
-      "fields": [
-        {
-          "id": "positionAbsolute",
-          "name": "Absolute Postion",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Absolute Position"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "top",
-          "name": "Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "right",
-          "name": "Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "bottom",
-          "name": "Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "left",
-          "name": "Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "stacking",
-          "name": "Stacking (z-index)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                10,
-                20,
-                30,
-                40,
-                50
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": 0
           },
           "disabled": false,
           "omitted": false
@@ -2904,7 +1239,7 @@
         "id": "itemFlex",
         "type": "ContentType",
         "createdAt": "2023-11-29T23:13:44.065Z",
-        "updatedAt": "2023-11-29T23:50:26.591Z",
+        "updatedAt": "2024-10-05T17:00:29.971Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2912,8 +1247,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2023-11-29T23:50:26.591Z",
+        "publishedVersion": 19,
+        "publishedAt": "2024-10-05T17:00:29.971Z",
         "firstPublishedAt": "2023-11-29T23:13:44.371Z",
         "createdBy": {
           "sys": {
@@ -2929,8 +1264,8 @@
             "id": "7MIl0BcR3Ah8fY4zLnOzsH"
           }
         },
-        "publishedCounter": 9,
-        "version": 18,
+        "publishedCounter": 10,
+        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -3019,6 +1354,23 @@
           "localized": false,
           "required": false,
           "validations": [
+            {
+              "in": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                9999,
+                -9999
+              ]
+            }
           ],
           "disabled": false,
           "omitted": false
@@ -3030,427 +1382,6 @@
           "localized": false,
           "required": false,
           "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "dimensionsWidth",
-        "type": "ContentType",
-        "createdAt": "2024-05-07T18:58:55.750Z",
-        "updatedAt": "2024-06-07T21:57:17.684Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 9,
-        "publishedAt": "2024-06-07T21:57:17.684Z",
-        "firstPublishedAt": "2024-05-07T18:58:56.126Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 5,
-        "version": 10,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/dimensionsWidth"
-      },
-      "displayField": "widthAttributes",
-      "name": "Layout: Dimensions - Width",
-      "description": "",
-      "fields": [
-        {
-          "id": "widthAttributes",
-          "name": "Width Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Dimensions: Width - [Descriptive Value]"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "width",
-          "name": "width",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "w-auto",
-                "ab-content-size",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-1/12",
-                "w-2/12",
-                "w-3/12",
-                "w-4/12",
-                "w-5/12",
-                "w-6/12",
-                "w-7/12",
-                "w-8/12",
-                "w-9/12",
-                "w-10/12",
-                "w-11/12",
-                "w-px",
-                "w-0.5",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "widthDefaultOverride",
-          "name": "Width - Default Override",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "w-auto",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-1/12",
-                "w-2/12",
-                "w-3/12",
-                "w-4/12",
-                "w-5/12",
-                "w-6/12",
-                "w-7/12",
-                "w-8/12",
-                "w-9/12",
-                "w-10/12",
-                "w-11/12",
-                "w-px",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutDimensionsBasis",
-        "type": "ContentType",
-        "createdAt": "2024-05-08T07:17:36.938Z",
-        "updatedAt": "2024-05-08T07:29:14.355Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-05-08T07:29:14.355Z",
-        "firstPublishedAt": "2024-05-08T07:17:37.270Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionsBasis"
-      },
-      "displayField": "flexBasisAttributes",
-      "name": "Layout: Dimensions - Flex Basis",
-      "description": "",
-      "fields": [
-        {
-          "id": "flexBasisAttributes",
-          "name": "Flex Basis Attributes: First Run",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexBasis",
-          "name": "Flex Basis",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "basis-auto",
-                "basis-full",
-                "basis-1/12",
-                "basis-2/12",
-                "basis-3/12",
-                "basis-4/12",
-                "basis-5/12",
-                "basis-6/12",
-                "basis-7/12",
-                "basis-8/12",
-                "basis-9/12",
-                "basis-10/12",
-                "basis-11/12"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexBasisOverrideDefault",
-          "name": "Flex Basis Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "basis-auto",
-                "basis-full",
-                "basis-1/12",
-                "basis-2/12",
-                "basis-3/12",
-                "basis-4/12",
-                "basis-5/12",
-                "basis-6/12",
-                "basis-7/12",
-                "basis-8/12",
-                "basis-9/12",
-                "basis-10/12",
-                "basis-11/12"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutMarginDesktop",
-        "type": "ContentType",
-        "createdAt": "2024-05-30T23:53:02.976Z",
-        "updatedAt": "2024-07-13T00:00:02.295Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 15,
-        "publishedAt": "2024-07-13T00:00:02.295Z",
-        "firstPublishedAt": "2024-05-30T23:53:03.361Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 8,
-        "version": 16,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginDesktop"
-      },
-      "displayField": "marginDesktop",
-      "name": "Layout: Margin - Desktop",
-      "description": "Reusable Margin Model.",
-      "fields": [
-        {
-          "id": "marginDesktop",
-          "name": "Desktop Margin Settings",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginXAuto",
-          "name": "Horizontal Margin Balanced (item centered)",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "margin",
-          "name": "Dekstop Margin",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
             {
               "in": [
                 0,
@@ -3464,851 +1395,8 @@
                 8,
                 9,
                 10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTopAuto",
-          "name": "Margin Top Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeftAuto",
-          "name": "Margin Left Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTop",
-          "name": "Desktop Margin Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginRight",
-          "name": "Desktop Margin Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginBottom",
-          "name": "Desktop Margin Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeft",
-          "name": "Desktop Margin Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutMarginTablet",
-        "type": "ContentType",
-        "createdAt": "2024-05-31T00:02:04.106Z",
-        "updatedAt": "2024-07-13T00:01:35.507Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 13,
-        "publishedAt": "2024-07-13T00:01:35.507Z",
-        "firstPublishedAt": "2024-05-31T00:02:04.446Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 7,
-        "version": 14,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginTablet"
-      },
-      "displayField": "marginTablet",
-      "name": "Layout: Margin - Tablet",
-      "description": "Reusable Margin Model.",
-      "fields": [
-        {
-          "id": "marginTablet",
-          "name": "Tablet Margin Settings",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginXAuto",
-          "name": "Horizontal Margin Balanced (item centered)",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "margin",
-          "name": "Tablet Margin",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTopAuto",
-          "name": "Margin Top Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginTop",
-          "name": "Tablet Margin Top",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginRight",
-          "name": "Tablet Margin Right",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginBottom",
-          "name": "Tablet Margin Bottom",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeft",
-          "name": "Tablet Margin Left",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "marginLeftAuto",
-          "name": "Margin Left Auto",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutDimensionsMinWidth",
-        "type": "ContentType",
-        "createdAt": "2024-06-07T22:02:19.106Z",
-        "updatedAt": "2024-06-07T22:08:24.193Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-06-07T22:08:24.193Z",
-        "firstPublishedAt": "2024-06-07T22:02:19.501Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionsMinWidth"
-      },
-      "displayField": "minWidthAttributes",
-      "name": "Layout: Dimensions - Min-Width ",
-      "description": "Min Width options in 4px(n) increments. These are only fixed widths. ",
-      "fields": [
-        {
-          "id": "minWidthAttributes",
-          "name": "Min Width Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Dimensions: Width - [Descriptive Value]"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "width",
-          "name": "width",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "w-auto",
-                "ab-content-size",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-px",
-                "w-0.5",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "widthDefaultOverride",
-          "name": "Width - Default Override",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "w-auto",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-px",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
-        "id": "layoutDimensionsMaxWidth",
-        "type": "ContentType",
-        "createdAt": "2024-06-07T22:09:15.180Z",
-        "updatedAt": "2024-08-23T20:20:50.157Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2024-08-23T20:20:50.157Z",
-        "firstPublishedAt": "2024-06-07T22:09:15.550Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionsMaxWidth"
-      },
-      "displayField": "maxWidthAttributes",
-      "name": "Layout: Dimensions - Max-Width",
-      "description": "Max Width options in 4px(n) increments. These are mostly fixed widths. ",
-      "fields": [
-        {
-          "id": "maxWidthAttributes",
-          "name": "Max Width Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Dimensions: Width - [Descriptive Value]"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "width",
-          "name": "width",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "ab-max-width",
-                "w-content-size",
-                "w-auto",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-px",
-                "w-0.5",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "widthDefaultOverride",
-          "name": "Width - Default Override",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "w-content-size",
-                "w-auto",
-                "w-fit",
-                "w-full",
-                "w-max",
-                "w-min",
-                "w-0",
-                "w-px",
-                "w-1",
-                "w-1.5",
-                "w-2",
-                "w-2.5",
-                "w-3",
-                "w-3.5",
-                "w-4",
-                "w-5",
-                "w-6",
-                "w-7",
-                "w-8",
-                "w-9",
-                "w-10",
-                "w-11",
-                "w-12",
-                "w-14",
-                "w-16",
-                "w-20",
-                "w-24",
-                "w-28",
-                "w-32",
-                "w-36",
-                "w-40",
-                "w-44",
-                "w-48",
-                "w-52",
-                "w-56",
-                "w-60",
-                "w-64",
-                "w-68",
-                "w-72",
-                "w-76",
-                "w-80",
-                "w-84",
-                "w-88",
-                "w-92",
-                "w-96"
+                -9999,
+                9999
               ]
             }
           ],
@@ -4459,7 +1547,7 @@
         "id": "stylesBackgroundColor",
         "type": "ContentType",
         "createdAt": "2024-06-26T04:00:56.084Z",
-        "updatedAt": "2024-08-29T00:00:51.948Z",
+        "updatedAt": "2024-10-09T00:23:47.863Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4467,8 +1555,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2024-08-29T00:00:51.948Z",
+        "publishedVersion": 17,
+        "publishedAt": "2024-10-09T00:23:47.863Z",
         "firstPublishedAt": "2024-06-26T04:00:56.403Z",
         "createdBy": {
           "sys": {
@@ -4481,16 +1569,16 @@
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+            "id": "5ycc1mTy0xRipRZEDU9BUy"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 9,
+        "version": 18,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+            "id": "5ycc1mTy0xRipRZEDU9BUy"
           }
         },
         "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesBackgroundColor"
@@ -4531,10 +1619,14 @@
                 "ab-primary-medium",
                 "ab-primary-light",
                 "ab-primary-lighter",
+                "ab-primary-extra-light",
                 "ab-primary-inactive",
                 "ab-secondary-dark",
                 "ab-secondary-medium",
                 "ab-secondary-light",
+                "ab-accent-1-light",
+                "ab-accent-1-medium",
+                "ab-accent-1-dark",
                 "ab-accent-2-dark",
                 "ab-accent-2-medium",
                 "ab-accent-2-light",
@@ -4570,10 +1662,14 @@
                 "ab-primary-medium",
                 "ab-primary-light",
                 "ab-primary-lighter",
+                "ab-primary-extra-light",
                 "ab-primary-inactive",
                 "ab-secondary-dark",
                 "ab-secondary-medium",
                 "ab-secondary-light",
+                "ab-accent-1-light",
+                "ab-accent-1-medium",
+                "ab-accent-1-dark",
                 "ab-accent-2-dark",
                 "ab-accent-2-medium",
                 "ab-accent-2-light",
@@ -4820,6 +1916,941 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "measurementsStatic",
+        "type": "ContentType",
+        "createdAt": "2024-10-18T22:51:31.421Z",
+        "updatedAt": "2024-10-18T22:51:31.840Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-18T22:51:31.840Z",
+        "firstPublishedAt": "2024-10-18T22:51:31.840Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsStatic"
+      },
+      "displayField": "value",
+      "name": "Measurements: Static",
+      "description": "The standard Tailwind CSS values for fixed measurements. n(4px)",
+      "fields": [
+        {
+          "id": "value",
+          "name": "Value",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "in": [
+                "0",
+                "px",
+                "0.5",
+                "1",
+                "2",
+                "2.5",
+                "3",
+                "3.5",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "14",
+                "16",
+                "20",
+                "24",
+                "28",
+                "32",
+                "36",
+                "40",
+                "44",
+                "48",
+                "52",
+                "56",
+                "60",
+                "64",
+                "68",
+                "72",
+                "76",
+                "80",
+                "84",
+                "88",
+                "92",
+                "96",
+                "content-size",
+                "ab-content-size",
+                "auto"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutMarginAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-10-18T22:51:32.321Z",
+        "updatedAt": "2024-10-18T22:51:32.637Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-18T22:51:32.637Z",
+        "firstPublishedAt": "2024-10-18T22:51:32.637Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginAttribute"
+      },
+      "displayField": "marginAttribute",
+      "name": "Layout: Margin Attribute",
+      "description": "Setup Layout properties for element margin with all the tailwind default margin prefixes, break points, and static measurements. \nhttps://tailwindcss.com/docs/margin",
+      "fields": [
+        {
+          "id": "marginAttribute",
+          "name": "Margin: [breakpoint:marginSuffix-value]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "mesaurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePrefix",
+          "name": "Value Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "m",
+                "mt",
+                "mr",
+                "mb",
+                "ml",
+                "mx",
+                "my"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "valueSuffix",
+          "name": "Value Suffix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "mesaurementBreakPoints",
+        "type": "ContentType",
+        "createdAt": "2024-10-18T22:51:33.159Z",
+        "updatedAt": "2024-10-18T22:51:33.604Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-18T22:51:33.604Z",
+        "firstPublishedAt": "2024-10-18T22:51:33.604Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/mesaurementBreakPoints"
+      },
+      "displayField": "value",
+      "name": "Mesaurement: Break Points",
+      "description": "Breakpoints for Responsive Design.",
+      "fields": [
+        {
+          "id": "value",
+          "name": "Value",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "in": [
+                "xxs",
+                "xs",
+                "default",
+                "md",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutPaddingAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-10-19T16:00:52.995Z",
+        "updatedAt": "2024-10-19T16:00:53.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-19T16:00:53.430Z",
+        "firstPublishedAt": "2024-10-19T16:00:53.430Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPaddingAttribute"
+      },
+      "displayField": "paddingAttribute",
+      "name": "Layout: Padding Attribute",
+      "description": "Setup Layout properties for element padding with all the tailwind default padding prefixes, break points, and static measurements. \nhttps://tailwindcss.com/docs/padding",
+      "fields": [
+        {
+          "id": "paddingAttribute",
+          "name": "Padding: [breakpoint:paddingSuffix-value]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "mesaurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePrefix",
+          "name": "Value Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "p",
+                "pt",
+                "pr",
+                "pb",
+                "pl",
+                "px",
+                "py"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "valueSuffix",
+          "name": "Value Suffix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutDimensionAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-10-19T17:18:10.155Z",
+        "updatedAt": "2024-10-19T17:18:10.537Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-19T17:18:10.537Z",
+        "firstPublishedAt": "2024-10-19T17:18:10.537Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionAttribute"
+      },
+      "displayField": "dimensionAttribute",
+      "name": "Layout: Dimension Attribute",
+      "description": "Setup Layout proerties. Width, Min-Width, Max-Width, Height, Min-Height, Max-Height, Basis for any breakpoint.\nhttps://tailwindcss.com/docs/width\nhttps://tailwindcss.com/docs/min-width\nhttps://tailwindcss.com/docs/max-width\nhttps://tailwindcss.com/docs/height\nhttps://tailwindcss.com/docs/min-height\nhttps://tailwindcss.com/docs/max-height\nhttps://tailwindcss.com/docs/basis",
+      "fields": [
+        {
+          "id": "dimensionAttribute",
+          "name": "Dimension: [breakpoint:dimension-value]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "mesaurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePrefix",
+          "name": "Value Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "w",
+                "min-w",
+                "max-w",
+                "h",
+                "min-h",
+                "max-h",
+                "basis"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "valueSuffix",
+          "name": "Value Suffix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic",
+                "measurementsRelative"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "measurementsRelative",
+        "type": "ContentType",
+        "createdAt": "2024-10-19T17:18:11.324Z",
+        "updatedAt": "2024-10-19T17:18:11.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-19T17:18:11.745Z",
+        "firstPublishedAt": "2024-10-19T17:18:11.745Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsRelative"
+      },
+      "displayField": "value",
+      "name": "Measurements: Relative",
+      "description": "Relative measurements are relative to Screen, Container, or Content. Full, n/12....",
+      "fields": [
+        {
+          "id": "value",
+          "name": "Value",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "in": [
+                "auto",
+                "full",
+                "screen",
+                "min",
+                "max",
+                "fit",
+                "svw",
+                "svh",
+                "lvw",
+                "lvh",
+                "dvw",
+                "dvh",
+                "1/12",
+                "2/12",
+                "3/12",
+                "4/12",
+                "5/12",
+                "6/12",
+                "7/12",
+                "8/12",
+                "9/12",
+                "10/12",
+                "11/12"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutPositionAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-10-20T19:47:01.453Z",
+        "updatedAt": "2024-10-20T23:54:59.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2024-10-20T23:54:59.825Z",
+        "firstPublishedAt": "2024-10-20T19:47:01.987Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 15,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionAttribute"
+      },
+      "displayField": "positionAttribute",
+      "name": "Layout Position Attribute",
+      "description": "Position controls where an element appears in relation to other elements, the window, or natural appearance in the page layout.",
+      "fields": [
+        {
+          "id": "positionAttribute",
+          "name": "Position: [breakpoint:position-value] [other vals]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "mesaurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "positionValue",
+          "name": "Position Value [realtive, absolute, fixed, sticky]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "relative",
+                "absolute",
+                "fixed",
+                "sticky"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "positionOrientation",
+          "name": "Position Orientation ",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutPositionOrientationAttribute"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "stacking",
+          "name": "Stacking: (z-index)",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "0",
+                "10",
+                "20",
+                "30",
+                "40",
+                "50",
+                "60",
+                "70",
+                "80",
+                "90"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutPositionOrientationAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-10-20T22:19:34.891Z",
+        "updatedAt": "2024-10-20T23:27:50.885Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-10-20T23:27:50.885Z",
+        "firstPublishedAt": "2024-10-20T22:19:35.290Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionOrientationAttribute"
+      },
+      "displayField": "locationAttribue",
+      "name": "Layout: Position Orientation Attribute",
+      "description": "Top/Right/Left/Bottom positioning used in Absolute, Fixed, and Static postioning. +/-{position}-{value}",
+      "fields": [
+        {
+          "id": "locationAttribue",
+          "name": "Location: +/-[location-value]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "locationPrefix",
+          "name": "Location Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "top",
+                "right",
+                "bottom",
+                "left"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "locationSuffix",
+          "name": "Location Suffix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic",
+                "measurementsRelative"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePositiveOrNegative",
+          "name": "Location Value Positive or Negative ",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "+",
+                "-"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "editorInterfaces": [
@@ -4834,7 +2865,7 @@
             "linkType": "Space"
           }
         },
-        "version": 56,
+        "version": 82,
         "createdAt": "2023-11-13T19:54:30.099Z",
         "createdBy": {
           "sys": {
@@ -4843,7 +2874,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-06-29T20:42:50.655Z",
+        "updatedAt": "2024-10-21T01:03:12.848Z",
         "updatedBy": {
           "sys": {
             "id": "7MIl0BcR3Ah8fY4zLnOzsH",
@@ -4870,7 +2901,7 @@
         {
           "fieldId": "layoutSetup",
           "settings": {
-            "helpText": "Title should contain \"Layout Setup\" e.g. Layout Setup: Our Company - Hero"
+            "helpText": "Title should contain \"Layout Setup\" e.g. Layout Setup: Stand Alone Card. Many layouts should be reusable, consider this when naming them."
           },
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
@@ -4878,7 +2909,7 @@
         {
           "fieldId": "dimensions",
           "settings": {
-            "helpText": "Currently Width Dimensions, Height and Top,Right, Bottom, Left coming",
+            "helpText": "Setup Dimension settings for width, min-width, max-width, height, min-height, max-height, flex-basis for any breakpoint. ",
             "bulkEditing": false,
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
@@ -4889,7 +2920,7 @@
         {
           "fieldId": "layoutFlow",
           "settings": {
-            "helpText": "Tells an element how to behave in relationship to its siblings, and sets the behavior of child elements.",
+            "helpText": "Tells an element how to behave in relationship to its siblings &/or children. Block, Flex, Grid (sort of)....",
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
           },
@@ -4909,11 +2940,12 @@
         {
           "fieldId": "layoutPosition",
           "settings": {
-            "helpText": "Static is default, and does not take a configuration. Most common will be \"relative.\" ",
-            "showLinkEntityAction": false,
+            "helpText": "Set up Layout positioning, allows for responsive configurations. ",
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
             "showCreateEntityAction": true
           },
-          "widgetId": "entryCardEditor",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -4989,410 +3021,6 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
-        "createdAt": "2023-11-13T19:54:30.861Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-05-06T19:44:00.010Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPaddingTablet",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "paddingTablet",
-          "settings": {
-            "helpText": "Title should include \"Tablet Padding\" e.g. Tablet Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "padding",
-          "settings": {
-            "helpText": "Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingTop",
-          "settings": {
-            "helpText": "Applied to top of element: Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingRight",
-          "settings": {
-            "helpText": "Applied to right side of element.Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingBottom",
-          "settings": {
-            "helpText": "Applied to bottom of element. Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingLeft",
-          "settings": {
-            "helpText": "Applied to left side of element.Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 6,
-        "createdAt": "2023-11-13T19:54:31.505Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-05-06T19:38:39.315Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPadding",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "paddingDefault",
-          "settings": {
-            "helpText": "Title should contain \"Mobile Padding\" or \"Default Padding\" e.g. Default Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "padding",
-          "settings": {
-            "helpText": "Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingTop",
-          "settings": {
-            "helpText": "Applied to top of element: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingRight",
-          "settings": {
-            "helpText": "Applied to right side of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingBottom",
-          "settings": {
-            "helpText": "Applied to bottom of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingLeft",
-          "settings": {
-            "helpText": "Applied to left side of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16,  and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 8,
-        "createdAt": "2023-11-13T19:54:32.506Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-05-08T20:37:03.145Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPaddingDesktop",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "paddingDesktop",
-          "settings": {
-            "helpText": "Title should contain \"Desktop Padding\" e.g. Desktop Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "padding",
-          "settings": {
-            "helpText": "Applied to all 4 sides: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16, and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingTop",
-          "settings": {
-            "helpText": "Applied to top of element: 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16, and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingRight",
-          "settings": {
-            "helpText": "Applied to right side of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16, and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingBottom",
-          "settings": {
-            "helpText": "Applied to bottom of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16, and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "paddingLeft",
-          "settings": {
-            "helpText": "Applied to left side of element. 0 is no padding increases by increments of 4px up to 12, then 8px for 14 & 16, and by 16px btwn 16 and 20+."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 12,
-        "createdAt": "2023-11-13T19:54:33.673Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-07-12T23:57:17.961Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutMarginDefault",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "marginDefault",
-          "settings": {
-            "helpText": "Title should contain \"Mobile Margin\" or \"Default Margin\" e.g. Default Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginXAuto",
-          "settings": {
-            "helpText": "Checking this will take precedence over any Margin Left or Margin Right settings, and will apply the value \"auto\" to both. ",
-            "trueLabel": "Yes",
-            "falseLabel": "No"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTopAuto",
-          "settings": {
-            "trueLabel": "true",
-            "falseLabel": "false"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeftAuto",
-          "settings": {
-            "trueLabel": "True",
-            "falseLabel": "False"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "margin",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTop",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginRight",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginBottom",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeft",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
         "version": 2,
         "createdAt": "2023-11-13T19:54:34.865Z",
         "createdBy": {
@@ -5448,350 +3076,6 @@
             "helpText": "Horizontal Alignment in Grid Space. Stretch is default."
           },
           "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 22,
-        "createdAt": "2023-11-13T19:54:36.029Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-09-18T22:17:38.172Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPositionSticky",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "positionSticky",
-          "settings": {
-            "helpText": "Title should contain \"Sticky Position\" e.g. Sticky Position : Nav Item - Tabs"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "top",
-          "settings": {
-            "helpText": "Supported values for top position. 4 * Multipler 4 * 32 = 128px"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "topValuePositiveOrNegative",
-          "settings": {
-            "helpText": "Is the top value negative or positive?"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "bottom",
-          "settings": {
-            "helpText": "Bottom Position. 4 * Multiplier. e.g. 4 * 1.5 = 6"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "bottomValuePositiveOrNegative",
-          "settings": {
-            "helpText": "Is the bottom value a positive or negative value?"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "stacking",
-          "settings": {
-            "helpText": "Z index/ stacking value. The highest the number put things on top. Start low. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2023-11-13T19:54:36.606Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-09-23T18:26:42.226Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPositionRelative",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "positionRelative",
-          "settings": {
-            "helpText": "Title should contain \"Relative\" e.g. Relative: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "stacking",
-          "settings": {
-            "helpText": "0 is default, it is the bottom of the stack. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2023-11-13T19:54:37.286Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-13T19:54:46.892Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPositionFixed",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "positionFixed",
-          "settings": {
-            "helpText": "Title should include \"Fixed Position\" e.g. Fixed Position: Hover Widget - Support"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "top",
-          "settings": {
-            "helpText": "Vertical position relative to Top of parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "right",
-          "settings": {
-            "helpText": "Horizontal position relative to Left of parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "bottom",
-          "settings": {
-            "helpText": "Vertical position relative to Bottom of relative parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "left",
-          "settings": {
-            "helpText": "Horizontal position relative to Left of relative parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "stacking",
-          "settings": {
-            "helpText": "Place this item above other items in the page. Default is 0. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 6,
-        "createdAt": "2023-11-13T19:54:38.171Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-06-27T06:31:11.016Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPositionAbsolute",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "positionAbsolute",
-          "settings": {
-            "helpText": "Title should contain \"Absolute Position\" e.g. Absolute Position : Hero - Badge"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "top",
-          "settings": {
-            "helpText": "Vertical position relative to Top of parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "right",
-          "settings": {
-            "helpText": "Horizontal position relative to right side of parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "bottom",
-          "settings": {
-            "helpText": "Vertical position relative to Bottom of relative parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "left",
-          "settings": {
-            "helpText": "Horizontal position relative to Left of parent container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "stacking",
-          "settings": {
-            "helpText": "Place this item above other items in the page. Default is 0. "
-          },
-          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -6274,7 +3558,7 @@
             "linkType": "Space"
           }
         },
-        "version": 18,
+        "version": 20,
         "createdAt": "2023-11-29T23:13:44.488Z",
         "createdBy": {
           "sys": {
@@ -6283,7 +3567,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-11-29T23:50:27.260Z",
+        "updatedAt": "2024-10-05T17:00:31.124Z",
         "updatedBy": {
           "sys": {
             "id": "7MIl0BcR3Ah8fY4zLnOzsH",
@@ -6349,534 +3633,13 @@
           "settings": {
             "helpText": "Order of item in flex container. "
           },
-          "widgetId": "numberEditor",
+          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         },
         {
           "fieldId": "orderOverrideDefault",
           "settings": {
             "helpText": "Override default (or Mobile) order of item with in flex container. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 10,
-        "createdAt": "2024-05-07T18:58:56.290Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-06-07T21:57:18.279Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "dimensionsWidth",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "widthAttributes",
-          "settings": {
-            "helpText": "Name For Width Setup where Descriptive Value is something like w-full to ab-content-size"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "width",
-          "settings": {
-            "helpText": "Choose a default relative width"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "widthDefaultOverride",
-          "settings": {
-            "helpText": "The relative size overrides the default (mobile) size"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2024-05-08T07:17:37.429Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-05-08T07:29:15.038Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutDimensionsBasis",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "flexBasisAttributes",
-          "settings": {
-            "helpText": "Flex basis Descriptive name. "
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexBasis",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexBasisOverrideDefault",
-          "settings": {
-            "helpText": "Override default/mobile setting"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 16,
-        "createdAt": "2024-05-30T23:53:03.519Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-07-13T00:00:02.890Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutMarginDesktop",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "marginDesktop",
-          "settings": {
-            "helpText": "Title should contain \"Mobile Margin\" or \"Default Margin\" e.g. Default Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginXAuto",
-          "settings": {
-            "helpText": "Checking this will take precedence over any Margin Left or Margin Right settings, and will apply the value \"auto\" to both. ",
-            "trueLabel": "Yes",
-            "falseLabel": "No"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "margin",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTopAuto",
-          "settings": {
-            "trueLabel": "true",
-            "falseLabel": "false"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeftAuto",
-          "settings": {
-            "trueLabel": "True",
-            "falseLabel": "False"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTop",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginRight",
-          "settings": {
-            "helpText": "Steps of n{4px}"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginBottom",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeft",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 14,
-        "createdAt": "2024-05-31T00:02:04.618Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-07-13T00:01:36.227Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutMarginTablet",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "marginTablet",
-          "settings": {
-            "helpText": "Title should contain \"Mobile Margin\" or \"Default Margin\" e.g. Default Padding: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginXAuto",
-          "settings": {
-            "helpText": "Checking this will take precedence over any Margin Left or Margin Right settings, and will apply the value \"auto\" to both. ",
-            "trueLabel": "Yes",
-            "falseLabel": "No"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "margin",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTopAuto",
-          "settings": {
-            "trueLabel": "true",
-            "falseLabel": "false"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginTop",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginRight",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginBottom",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeft",
-          "settings": {
-            "helpText": "Steps of n(4px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "marginLeftAuto",
-          "settings": {
-            "trueLabel": "True",
-            "falseLabel": "False"
-          },
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2024-06-07T22:02:19.632Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-06-07T22:08:24.850Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutDimensionsMinWidth",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "minWidthAttributes",
-          "settings": {
-            "helpText": "Name For Width Setup where Descriptive Value is something like w-full to ab-content-size"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "width",
-          "settings": {
-            "helpText": "This is a Minimum Width, it is a fixed pixel value based on 4px(n) e.g. 12 * 4px = 48px or 3rem"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "widthDefaultOverride",
-          "settings": {
-            "helpText": "Overrides the default (mobile) size: This is a Minimum Width, it is a fixed pixel value based on 4px(n) e.g. 12 * 4px = 48px or 3rem"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 8,
-        "createdAt": "2024-06-07T22:09:15.696Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-08-23T20:20:50.884Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutDimensionsMaxWidth",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "maxWidthAttributes",
-          "settings": {
-            "helpText": "Name For Width Setup where Descriptive Value is something like w-full to ab-content-size"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "width",
-          "settings": {
-            "helpText": "This is a Max Width, it is a fixed pixel value based on 4px(n) e.g. 12 * 4px = 48px or 3rem. Full width options are relative and can be used to override defaults."
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "widthDefaultOverride",
-          "settings": {
-            "helpText": "Overrides the default (mobile) size: This is a Maximum Width, it is a fixed pixel value based on 4px(n) e.g. 12 * 4px = 48px or 3rem. Full width options are relative and can be used to override defaults."
           },
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
@@ -6972,7 +3735,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 16,
         "createdAt": "2024-06-26T04:00:56.533Z",
         "createdBy": {
           "sys": {
@@ -6981,10 +3744,10 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-08-29T00:00:53.219Z",
+        "updatedAt": "2024-10-09T00:23:48.059Z",
         "updatedBy": {
           "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "id": "5ycc1mTy0xRipRZEDU9BUy",
             "type": "Link",
             "linkType": "User"
           }
@@ -7158,6 +3921,580 @@
             "helpText": "Shadow settings. Shadow does not affect component geometry. shadow-0002px-07 is like a soft border. "
           },
           "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-18T22:51:31.964Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-18T22:51:34.255Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "measurementsStatic",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "value",
+          "settings": {
+            "helpText": "Fixed pixel value: n(4px), px 1px. Use ab-content-size sparingly for Width Only on outer containers."
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-18T22:51:32.827Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-18T22:51:34.805Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutMarginAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "marginAttribute",
+          "settings": {
+            "helpText": "Name of Padding Setting. Padding: [breakpoint:dimension-value]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "Select Breakpoint Value",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePrefix",
+          "settings": {
+            "helpText": "Margin Prefixes from tailwind m (all around margin), mt (Margin Top), mr (Margin Right), mb (Margin Bottom), ml (Margin Left), mx (ml & mr), my(mt & mb)"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valueSuffix",
+          "settings": {
+            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-18T22:51:33.749Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-18T22:51:35.135Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "mesaurementBreakPoints",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "value",
+          "settings": {
+            "helpText": "xxs (200px), xs (475px), md (786px), lg (1024px), xl(1280px), 2xl(1536px), 3xl (1932px)"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-19T16:00:53.668Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-19T16:00:54.219Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutPaddingAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "paddingAttribute",
+          "settings": {
+            "helpText": "Name of Padding Setting. Padding: [breakpoint:dimension-value]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "Select Breakpoint Value",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePrefix",
+          "settings": {
+            "helpText": "Choose where the padding should go pt (Padding Top), pr (Padding Right), pb (Padding Bottom), pl (Padding Left), px (pl and pr), py (pt and pb)"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valueSuffix",
+          "settings": {
+            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-19T17:18:10.895Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-19T17:18:12.559Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutDimensionAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "dimensionAttribute",
+          "settings": {
+            "helpText": "Name of Dimension Setting. Dimension: [breakpoint:dimension-value]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "Select Breakpoint Value",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePrefix",
+          "settings": {
+            "helpText": "Select Type of Dimension (with, height, basis...)"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valueSuffix",
+          "settings": {
+            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-19T17:18:11.876Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-19T17:18:13.311Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "measurementsRelative",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "value",
+          "settings": {
+            "helpText": "Size of element relates to size of the screen, the containing element, or content. 6/12 = 50, full = 100%, fit is relative content"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 30,
+        "createdAt": "2024-10-20T19:47:02.254Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-20T23:55:00.497Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutPositionAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "positionAttribute",
+          "settings": {
+            "helpText": "Name of position setting. Position: [breakpoint:position-value] [related values]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "positionValue",
+          "settings": {
+            "helpText": "Relative: children are positioned relative to the element, which stays in the natural flow. Absolute breaks the flow and is relative to the nearest relative parent. Absolute, Fixed, and Sticky allow precise positioning."
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "positionOrientation",
+          "settings": {
+            "helpText": "Define Top, Right, Left, &/ Bottom positioning. Only works with Absolute, Fixed, and Sticky positions. ",
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "stacking",
+          "settings": {
+            "helpText": "Layering of element default is 0"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2024-10-20T22:19:35.492Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-20T23:27:51.473Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutPositionOrientationAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "locationAttribue",
+          "settings": {
+            "helpText": "Location (top/right/bottom/left) and Value (relative/static)"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "locationPrefix",
+          "settings": {
+            "helpText": "Top, Right, Bottom, Left"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "locationSuffix",
+          "settings": {
+            "helpText": "Static (px based), Relative (usually % based)",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePositiveOrNegative",
+          "settings": {
+            "helpText": "Values for position location can be positive (+) or negative (-). Teh defauly is Positive. "
+          },
+          "widgetId": "radio",
           "widgetNamespace": "builtin"
         }
       ]

@@ -3,131 +3,42 @@ import {
 } from './layoutConfigs';
 
 /*
-    * This takes our Laout Model and Maps to Tailwind Standards
-    * Our Standardized Model is proessed from the Contentful content model
+    * This takes our Layout Model and Maps to Tailwind Standards
+    * Our Standardized Model is processed from the Contentful content model
     * It  top level model looks like this
     {
-        layoutPosition: {},
-        layoutFlow: {},
-        itemAttributes: {},
-        padding: [],
-        margin: []
+        backgroundColor = {},
+        border = {},
+        boxShadow = {},
+        itemAttributes = {},
+        layoutFlow = {},
+        layoutPosition = {},
+        margin = [],
+        overflow = {},
+        padding = [],
+        dimensions = []
     }
 
     ADD:
-    Add fxied width values
-    layoutDimensionsMinWidth : minWidthAttributes
-    layoutDimensionsMaxWidth : maxWidthAttributes
-
-    FIX:
-    Margin Auto Optons
-
+    Background Image handling
 */
 const tailWindMapper = {
     backgroundColor: {
         backgroundColors: {
-            'ab-white-dark': 'bg-ab-white-dark',
-            'ab-white-medium': 'bg-ab-white-medium',
-            'ab-primary-dark': 'bg-ab-primary-dark',
-            'ab-primary-darker': 'bg-ab-primary-darker',
-            'ab-primary-dark-highlight': 'bg-ab-primary-dark-highlight',
-            'ab-primary-medium': 'bg-ab-primary-medium',
-            'ab-primary-light': 'bg-ab-primary-light',
-            'ab-primary-lighter': 'bg-ab-primary-lighter',
-            'ab-primary-inactive': 'bg-ab-primary-inactive',
-            'ab-secondary-dark': 'bg-ab-secondary-dark',
-            'ab-secondary-medium': 'bg-ab-secondary-medium',
-            'ab-secondary-light': 'bg-ab-secondary-light',
-            'ab-accent-2-dark': 'bg-ab-accent-2-dark',
-            'ab-accent-2-medium': 'bg-ab-accent-2-medium',
-            'ab-accent-2-light': 'bg-ab-accent-2-light',
-            'ab-accent-3-dark': 'bg-ab-accent-3-dark',
-            'ab-accent-3-medium': 'bg-ab-accent-3-medium',
-            'ab-accent-3-light': 'bg-ab-accent-3-light',
-            'ab-accent-4-dark': 'bg-ab-accent-4-dark',
-            'ab-accent-4-medium': 'bg-ab-accent-4-medium',
-            'ab-accent-4-light': 'bg-ab-accent-4-light',
-            'ab-accent-5-medium': 'bg-ab-accent-5-medium',
-            'ab-accent-6-medium': 'bg-ab-accent-6-medium',
-            'ab-accent-7-medium': 'bg-ab-accent-7-medium'
-        },
-        backgroundColorOverride: {
-            'ab-white-dark': 'md:bg-ab-white-dark',
-            'ab-white-medium': 'md:bg-ab-white-medium',
-            'ab-primary-dark': 'md:bg-ab-primary-dark',
-            'ab-primary-darker': 'md:bg-ab-primary-darker',
-            'ab-primary-dark-highlight': 'md:bg-ab-primary-dark-highlight',
-            'ab-primary-medium': 'md:bg-ab-primary-medium',
-            'ab-primary-light': 'md:bg-ab-primary-light',
-            'ab-primary-lighter': 'md:bg-ab-primary-lighter',
-            'ab-primary-inactive': 'md:bg-ab-primary-inactive',
-            'ab-secondary-dark': 'md:bg-ab-secondary-dark',
-            'ab-secondary-medium': 'md:bg-ab-secondary-medium',
-            'ab-secondary-light': 'md:bg-ab-secondary-light',
-            'ab-accent-2-dark': 'md:bg-ab-accent-2-dark',
-            'ab-accent-2-medium': 'md:bg-ab-accent-2-medium',
-            'ab-accent-2-light': 'md:bg-ab-accent-2-light',
-            'ab-accent-3-dark': 'md:bg-ab-accent-3-dark',
-            'ab-accent-3-medium': 'md:bg-ab-accent-3-medium',
-            'ab-accent-3-light': 'md:bg-ab-accent-3-light',
-            'ab-accent-4-dark': 'md:bg-ab-accent-4-dark',
-            'ab-accent-4-medium': 'md:bg-ab-accent-4-medium',
-            'ab-accent-4-light': 'md:g-ab-accent-4-light',
-            'ab-accent-5-medium': 'md:bg-ab-accent-5-medium',
-            'ab-accent-6-medium': 'md:bg-ab-accent-6-medium',
-            'ab-accent-7-medium': 'md:bg-ab-accent-7-medium'
+            backgroundColor: val => `bg-${val}`,
+            backgroundColorOverride: val => `md:bg-${val}`
         }
     },
     border: {
         borderAttributes: {
             borderColor: val => `border-${val}`,
-            borderRadius: val => `rounded-${val}`,
+            borderRadius: val => (val === 'rounded' ? val : `rounded-${val}`),
             borderWidth: val => val
         }
     },
     boxShadow: {
         boxShadowAttributes: {
             boxShadow: val => val
-        }
-    },
-    layoutPosition: {
-        positionAbsolute: {
-            twValue: 'absolute',
-            bottom: val => `bottom-${val}`,
-            left: val => `left-${val}`,
-            right: val => `right-${val}`,
-            top: val => `top-${val}`,
-            stacking: val => `z-${val}`
-        },
-        positionFixed: {
-            twValue: 'fixed',
-            bottom: val => `bottom-${val}`,
-            left: val => `left-${val}`,
-            right: val => `right-${val}`,
-            top: val => `top-${val}`,
-            stacking: val => `z-${val}`
-        },
-        positionRelative: {
-            twValue: 'relative',
-            stacking: val => `z-${val}`
-        },
-        positionSticky: {
-            twValue: 'sticky',
-            bottom: (val, conf) => {
-                const {
-                    bottomValuePositiveOrNegative = ''
-                } = conf;
-
-                return bottomValuePositiveOrNegative ? `-bottom-${val}` : `bottom-${val}`;
-            },
-            top: (val, conf) => {
-                const {
-                    topValuePositiveOrNegative = ''
-                } = conf;
-
-                return topValuePositiveOrNegative ? `-top-${val}` : `top-${val}`;
-            },
-            stacking: val => `z-${val}`
         }
     },
     itemAttributes: {
@@ -156,16 +67,34 @@ const tailWindMapper = {
                 numerical: val => `basis-[${val}]`
             },
             order: {
-                first: 'order-first',
-                last: 'order-last',
-                none: 'order-0',
-                numerical: val => `order-${val}`
+                0: 'order-none',
+                9999: 'order-last',
+                '-9999': 'order-first',
+                1: 'order-1',
+                2: 'order-2',
+                3: 'order-3',
+                4: 'order-4',
+                5: 'order-5',
+                6: 'order-6',
+                7: 'order-7',
+                8: 'order-8',
+                9: 'order-9',
+                10: 'order-10'
             },
             orderOverrideDefault: {
-                first: 'md:order-first',
-                last: 'md:order-last',
-                none: 'md:order-0',
-                numerical: val => `md:order-${val}`
+                0: 'xl:order-none',
+                9999: 'xl:order-last',
+                '-9999': 'xl:order-first',
+                1: 'xl:order-1',
+                2: 'xl:order-2',
+                3: 'xl:order-3',
+                4: 'xl:order-4',
+                5: 'xl:order-5',
+                6: 'xl:order-6',
+                7: 'xl:order-7',
+                8: 'xl:order-8',
+                9: 'xl:order-9',
+                10: 'xl:order-10'
             }
         }
     },
@@ -369,79 +298,6 @@ const tailWindMapper = {
             }
         }
     },
-    margin: {
-        marginDefault: {
-            marginXAuto: val => (val ? 'mx-auto' : ''),
-            marginLeftAuto: val => (val ? 'ml-auto' : ''),
-            marginTopAuto: val => (val ? 'mt-auto' : ''),
-            margin: val => `m-${val}`,
-            marginBottom: val => `mb-${val}`,
-            marginLeft: val => `ml-${val}`,
-            marginRight: val => `mr-${val}`,
-            marginTop: val => `mt-${val}`
-        },
-        marginTablet: {
-            marginXAuto: val => (val ? 'md:mx-auto' : ''),
-            marginLeftAuto: val => (val ? 'md:ml-auto' : ''),
-            marginTopAuto: val => (val ? 'md:mt-auto' : ''),
-            margin: val => `md:m-${val}`,
-            marginBottom: val => `md:mb-${val}`,
-            marginLeft: val => `md:ml-${val}`,
-            marginRight: val => `md:mr-${val}`,
-            marginTop: val => `md:mt-${val}`
-        },
-        marginDesktop: {
-            marginXAuto: val => (val ? 'lg:mx-auto' : ''),
-            marginLeftAuto: val => (val ? 'lg:ml-auto' : ''),
-            marginTopAuto: val => (val ? 'lg:mt-auto' : ''),
-            margin: val => `lg:m-${val}`,
-            marginBottom: val => `lg:mb-${val}`,
-            marginLeft: val => `lg:ml-${val}`,
-            marginRight: val => `lg:mr-${val}`,
-            marginTop: val => `lg:mt-${val}`
-        }
-    },
-    padding: {
-        paddingDefault: {
-            padding: val => `p-${val}`,
-            paddingBottom: val => `pb-${val}`,
-            paddingLeft: val => `pl-${val}`,
-            paddingRight: val => `pr-${val}`,
-            paddingTop: val => `pt-${val}`
-        },
-        paddingTablet: {
-            padding: val => `md:p-${val}`,
-            paddingBottom: val => `md:pb-${val}`,
-            paddingLeft: val => `md:pl-${val}`,
-            paddingRight: val => `md:pr-${val}`,
-            paddingTop: val => `md:pt-${val}`
-        },
-        paddingDesktop: {
-            padding: val => `lg:p-${val}`,
-            paddingBottom: val => `lg:pb-${val}`,
-            paddingLeft: val => `lg:pl-${val}`,
-            paddingRight: val => `lg:pr-${val}`,
-            paddingTop: val => `lg:pt-${val}`
-        }
-    },
-    dimensions: {
-        widthAttributes: {
-            width: val => val,
-            widthDefaultOverride: val => `md:${val}`
-        },
-        maxWidthAttributes: {
-            width: val => `max-${val}`,
-            widthDefaultOverride: val => `md:max-${val}`
-        },
-        minWidthAttributes: {
-            width: val => `min-${val}`,
-            widthDefaultOverride: val => `md:min-${val}`
-        },
-        flexBasisAttributes: {
-            flexBasis: val => val,
-            flexBasisOverrideDefault: val => `md:${val}`
-        }
-    },
     overflow: {
         overflowAttributes: {
             overflow: val => `overflow-${val}`,
@@ -471,7 +327,7 @@ const buildTWString = (conf, twMap) => {
 
         if (!twAttr) return designation;
 
-        // Some Items Like gap, padding, margin, columns will return a function
+        // Some Items Like gap, columns will return a function
         // The function accectps a value and returns a string with a prefix
         const isItAfunction = typeof twAttr === 'function';
         const applyString = !isItAfunction ? twAttr[value] : twAttr(value, conf);
@@ -489,44 +345,43 @@ const buildTWString = (conf, twMap) => {
     }, '');
 };
 
-const multiEntryString = (config, twNode) => {
-    if (!config || !twNode) return '';
+const buildComplexStrings = (values = {}) => values.map(({
+    breakpointPrefix = '',
+    positionOrientation = [],
+    positionValue = '',
+    stacking = '',
+    valuePrefix = '',
+    valueSuffix = ''
+} = {}) => {
+    // relative, absoluted, fixed, sticky w/ or w/out breakpoint
+    const positionSelector = breakpointPrefix && positionValue ? `${breakpointPrefix}:${positionValue}` : positionValue;
+    const stackString = stacking ? `z-${stacking}` : '';
+    const orienstationString = positionSelector ? positionOrientation.map(({
+        fields: {
+            locationPrefix = '',
+            locationSuffix: { fields: { value: locationSuffix } = {} } = {},
+            valuePositiveOrNegative = '+'
+        } = {}
+    } = {}) => {
+        // top, right, bottom, left and static or relative value
+        const locationString = (locationPrefix && locationSuffix) ? `${locationPrefix}-${locationSuffix}` : '';
+        // has a positive or negative value
+        const locationBase = locationString && valuePositiveOrNegative !== '+' ? `${valuePositiveOrNegative}${locationString}` : locationString;
 
-    return Object.entries(config).map(([device, settings]) => {
-        const strFncs = twNode[device];
+        // matched break point for positionSelector
+        return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationString}` : locationBase;
+    }) : '';
 
-        return Object.entries(settings).reduce((pd, [setting, value]) => {
-            if (strFncs && strFncs[setting]) {
-                return `${pd} ${strFncs[setting](value)}`;
-            }
+    if (positionSelector) {
+        return [positionSelector, ...orienstationString, stackString].join(' ').trim();
+    }
 
-            return pd;
-        }, '');
-    }).join(' ');
-};
+    // This applies to Dimensions, Padding, and Margin—this is the simplest form of this pattern
+    const valueString = valuePrefix ? `${valuePrefix}-${valueSuffix}` : valueSuffix;
+    const valueSelector = (valueString && breakpointPrefix) ? `${breakpointPrefix}:${valueString}` : valueString;
 
-const getDimensions = (dimensions = {}) => {
-    const processDimension = (
-        [
-            lookupVal = '',
-            attributes = {}
-        ] = []
-    ) => Object.entries(attributes).reduce((designation, [label, value]) => {
-        if (!value || value === 'none') return designation;
-
-        const {
-            dimensions: {
-                [lookupVal]: twNode
-            } = {}
-        } = tailWindMapper;
-
-        const additional = twNode && twNode[label] ? ` ${twNode[label](value)}` : '';
-
-        return `${designation.trim()}${additional}`;
-    }, '');
-
-    return Object.entries(dimensions).map(avpair => processDimension(avpair)).join(' ');
-};
+    return valueSelector;
+}).join(' ');
 
 export default (configMap) => {
     if (!configMap) return '';
@@ -553,12 +408,13 @@ export default (configMap) => {
     const setBoxShadow = boxShadow ? buildTWString(boxShadow, tailWindMapper.boxShadow) : '';
     const setFlow = layoutFlow ? buildTWString(layoutFlow, tailWindMapper.layoutFlow) : '';
     const setItem = itemAttributes ? buildTWString(itemAttributes, tailWindMapper.itemAttributes) : '';
-    const setMargin = margin ? multiEntryString(margin, tailWindMapper.margin) : '';
+    const setMargin = margin ? buildComplexStrings(margin) : '';
     const setOverflow = overflow ? buildTWString(overflow, tailWindMapper.overflow) : '';
-    const setPadding = padding ? multiEntryString(padding, tailWindMapper.padding) : '';
-    const setPosition = layoutPosition ? buildTWString(layoutPosition, tailWindMapper.layoutPosition) : '';
-    const setDimensions = dimensions ? getDimensions(dimensions) : '';
+    const setPadding = padding ? buildComplexStrings(padding) : '';
+    const setPosition = layoutPosition ? buildComplexStrings(layoutPosition) : '';
+    const setDimensions = dimensions ? buildComplexStrings(dimensions) : '';
+    const cleanSelector = [setPosition, setFlow, setItem, setDimensions, setPadding, setMargin, setOverflow, setBorder, setBackground, setBoxShadow].join(' ');
 
     // Final string to be applied to a container.
-    return `${setPosition} ${setFlow} ${setItem} ${setPadding} ${setMargin} ${setDimensions} ${setBorder} ${setBackground} ${setOverflow} ${setBoxShadow}`.replace(/\s{2,}/g, ' ').trim();
+    return cleanSelector.trim();
 };

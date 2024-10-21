@@ -6,43 +6,10 @@ export const getConfigLabel = (config = {}) => {
     // For Padding and Margin this field name indicates if the config is for Mobile, Tablet, Desktop
     // For Layout flow this field name is the display Property for the element. e.g. `displayFlex` would map to a `display: flex` classname.
     // Extract first [attrName, attrValue] pair, then the first item from that pair.
-    const [[labelName = ''] = []] = Object.entries(config);
+    const [[labelName = ''] = []] = Object.entries(config) || [];
 
     return labelName;
 };
-
-const getConfig = (config = {}) => {
-    const clone = structuredClone(config);
-    const labelName = getConfigLabel(clone);
-
-    if (labelName) {
-        // removes the a:v pair from which the label is derived in order to clean up data
-        delete clone[labelName];
-
-        return {
-            [labelName]: clone
-        };
-    }
-
-    return {};
-};
-
-// All single configs are in an layOutGroup: {..layoutGroupAttributes },  e.g. { layoutFlow: { display: flex, ...}}
-// This sets up configs with multiple entries in a similar fashion (e.g. margin & padding across break points)
-const extractComplexConfig = entries => entries.reduce((subConfig, entry = {}) => {
-    const { fields = {} } = entry;
-    const subConfigSetUp = getConfig(fields);
-    const keyValueForTest = getConfigLabel(fields);
-
-    if (keyValueForTest && !subConfig[keyValueForTest]) {
-        return {
-            ...subConfig,
-            ...subConfigSetUp
-        };
-    }
-    // if boolean fails returns subConfig as it is.
-    return subConfig;
-}, {});
 
 /*
  * This is the name of the "content model"
@@ -71,18 +38,19 @@ export const layoutConfig = ({ fields = {} } = {}) => {
     if (!Object.keys(fields).length) return undefined;
 
     const layoutRawConfig = Object.entries(fields);
+
     const buildConfig = layoutRawConfig.reduce((
         styleConfig,
         [
             layoutTreeItemLabel,
-            entry
-        ]
+            entry = {}
+        ] = []
     ) => {
         // This covers all cases in the model where only one config is allowed
         // layoutFlow, layoutPosition, layoutItem
         const {
             fields: layoutTreeItemFields,
-            sys
+            sys = {}
         } = entry;
 
         const appliedLabel = layoutTreeItemLabel || getLabelFromSysMetaData(sys);
@@ -98,11 +66,29 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         }
 
         // This covers all cases in the model where more than one entry is allowed
-        // padding, margin
+        // padding, margin, dimensions
         if (Array.isArray(entry) && entry.length) {
+            const dimensionMap = entry.map(({
+                fields: {
+                    breakpointPrefix: { fields: { value: breakpointPrefix } = {} } = {},
+                    valuePrefix = '',
+                    valueSuffix: { fields: { value: valueSuffix } = {} } = {},
+                    positionValue = '',
+                    positionOrientation = [],
+                    stacking
+                } = {}
+            }) => ({
+                ...(breakpointPrefix && { breakpointPrefix }),
+                ...(valuePrefix && { valuePrefix }),
+                ...(valueSuffix && { valueSuffix }),
+                ...(positionValue && { positionValue }),
+                ...(positionOrientation.length && { positionOrientation }),
+                ...(stacking && { stacking })
+            }));
+
             return {
                 ...styleConfig,
-                [appliedLabel]: extractComplexConfig(entry)
+                [appliedLabel]: dimensionMap
             };
         }
 
