@@ -2,6 +2,5 @@
     "spaceId": "",
     "environmentId": "master",
     "managementToken": "",
-    "content-model-only": true,
     "contentFile": "./contentful-layout-contentype_editorinterfaces.json"
 }
