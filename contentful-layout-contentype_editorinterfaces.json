@@ -2,51 +2,8 @@
   "contentTypes": [
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layout",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:29.686Z",
-        "updatedAt": "2024-10-21T01:03:12.061Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 81,
-        "publishedAt": "2024-10-21T01:03:12.061Z",
-        "firstPublishedAt": "2023-11-13T19:54:29.933Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 41,
-        "version": 82,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layout"
+        "type": "ContentType"
       },
       "displayField": "layoutSetup",
       "name": "Layout",
@@ -276,51 +233,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutItemGrid",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:34.561Z",
-        "updatedAt": "2023-11-13T19:54:34.764Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-11-13T19:54:34.764Z",
-        "firstPublishedAt": "2023-11-13T19:54:34.764Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutItemGrid"
+        "type": "ContentType"
       },
       "displayField": "itemGrid",
       "name": " Layout: Item - Grid",
@@ -388,51 +302,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutDisplayInlineBlock",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:39.120Z",
-        "updatedAt": "2023-11-13T19:54:39.450Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-11-13T19:54:39.450Z",
-        "firstPublishedAt": "2023-11-13T19:54:39.450Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayInlineBlock"
+        "type": "ContentType"
       },
       "displayField": "displayInline",
       "name": "Layout: Display - Inline Block",
@@ -456,51 +327,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutDisplayGrid",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:39.807Z",
-        "updatedAt": "2023-11-13T19:54:40.016Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-11-13T19:54:40.016Z",
-        "firstPublishedAt": "2023-11-13T19:54:40.016Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayGrid"
+        "type": "ContentType"
       },
       "displayField": "displayGrid",
       "name": "Layout: Display - Grid",
@@ -561,51 +389,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutDisplayFlex",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:40.384Z",
-        "updatedAt": "2024-05-06T18:39:21.719Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 21,
-        "publishedAt": "2024-05-06T18:39:21.719Z",
-        "firstPublishedAt": "2023-11-13T19:54:40.599Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 11,
-        "version": 22,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayFlex"
+        "type": "ContentType"
       },
       "displayField": "displayFlex",
       "name": "Layout: Display - Flex",
@@ -875,51 +660,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutDisplayBlock",
-        "type": "ContentType",
-        "createdAt": "2023-11-13T19:54:41.061Z",
-        "updatedAt": "2023-11-13T19:54:41.271Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2023-11-13T19:54:41.271Z",
-        "firstPublishedAt": "2023-11-13T19:54:41.271Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayBlock"
+        "type": "ContentType"
       },
       "displayField": "displayBlock",
       "name": "Layout: Display - Block",
@@ -965,51 +707,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "displayInlineFlex",
-        "type": "ContentType",
-        "createdAt": "2023-11-29T23:10:40.744Z",
-        "updatedAt": "2023-11-29T23:53:02.123Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 9,
-        "publishedAt": "2023-11-29T23:53:02.123Z",
-        "firstPublishedAt": "2023-11-29T23:10:41.071Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 5,
-        "version": 10,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/displayInlineFlex"
+        "type": "ContentType"
       },
       "displayField": "displayFlex",
       "name": "Layout: Display - Inline Flex",
@@ -1229,51 +928,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "itemFlex",
-        "type": "ContentType",
-        "createdAt": "2023-11-29T23:13:44.065Z",
-        "updatedAt": "2024-10-05T17:00:29.971Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 19,
-        "publishedAt": "2024-10-05T17:00:29.971Z",
-        "firstPublishedAt": "2023-11-29T23:13:44.371Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 10,
-        "version": 20,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/itemFlex"
+        "type": "ContentType"
       },
       "displayField": "flexItem",
       "name": "Layout: Item - Flex",
@@ -1407,51 +1063,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "borders",
-        "type": "ContentType",
-        "createdAt": "2024-06-19T21:25:23.740Z",
-        "updatedAt": "2024-06-29T20:33:54.542Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2024-06-29T20:33:54.542Z",
-        "firstPublishedAt": "2024-06-19T21:25:24.132Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/borders"
+        "type": "ContentType"
       },
       "displayField": "borderAttributes",
       "name": "Styles: Borders",
@@ -1537,51 +1150,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "stylesBackgroundColor",
-        "type": "ContentType",
-        "createdAt": "2024-06-26T04:00:56.084Z",
-        "updatedAt": "2024-10-09T00:23:47.863Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 17,
-        "publishedAt": "2024-10-09T00:23:47.863Z",
-        "firstPublishedAt": "2024-06-26T04:00:56.403Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "5ycc1mTy0xRipRZEDU9BUy"
-          }
-        },
-        "publishedCounter": 9,
-        "version": 18,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "5ycc1mTy0xRipRZEDU9BUy"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesBackgroundColor"
+        "type": "ContentType"
       },
       "displayField": "backgroundColors",
       "name": "Styles: Background Color",
@@ -1692,51 +1262,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "stylesOverflow",
-        "type": "ContentType",
-        "createdAt": "2024-06-26T21:08:46.992Z",
-        "updatedAt": "2024-06-26T21:36:00.236Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 17,
-        "publishedAt": "2024-06-26T21:36:00.236Z",
-        "firstPublishedAt": "2024-06-26T21:08:47.344Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 9,
-        "version": 18,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesOverflow"
+        "type": "ContentType"
       },
       "displayField": "overflowAttributes",
       "name": " Styles: Overflow",
@@ -1825,51 +1352,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "stylesBoxShadow",
-        "type": "ContentType",
-        "createdAt": "2024-06-29T19:11:20.163Z",
-        "updatedAt": "2024-07-01T20:46:00.974Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2024-07-01T20:46:00.974Z",
-        "firstPublishedAt": "2024-06-29T19:11:20.493Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesBoxShadow"
+        "type": "ContentType"
       },
       "displayField": "boxShadowAttributes",
       "name": "Styles: Box Shadow",
@@ -1919,51 +1403,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "measurementsStatic",
-        "type": "ContentType",
-        "createdAt": "2024-10-18T22:51:31.421Z",
-        "updatedAt": "2024-10-18T22:51:31.840Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-18T22:51:31.840Z",
-        "firstPublishedAt": "2024-10-18T22:51:31.840Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsStatic"
+        "type": "ContentType"
       },
       "displayField": "value",
       "name": "Measurements: Static",
@@ -2033,51 +1474,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutMarginAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-10-18T22:51:32.321Z",
-        "updatedAt": "2024-10-18T22:51:32.637Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-18T22:51:32.637Z",
-        "firstPublishedAt": "2024-10-18T22:51:32.637Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginAttribute"
+        "type": "ContentType"
       },
       "displayField": "marginAttribute",
       "name": "Layout: Margin Attribute",
@@ -2157,51 +1555,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "mesaurementBreakPoints",
-        "type": "ContentType",
-        "createdAt": "2024-10-18T22:51:33.159Z",
-        "updatedAt": "2024-10-18T22:51:33.604Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-18T22:51:33.604Z",
-        "firstPublishedAt": "2024-10-18T22:51:33.604Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/mesaurementBreakPoints"
+        "type": "ContentType"
       },
       "displayField": "value",
       "name": "Mesaurement: Break Points",
@@ -2237,51 +1592,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutPaddingAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-10-19T16:00:52.995Z",
-        "updatedAt": "2024-10-19T16:00:53.430Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-19T16:00:53.430Z",
-        "firstPublishedAt": "2024-10-19T16:00:53.430Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPaddingAttribute"
+        "type": "ContentType"
       },
       "displayField": "paddingAttribute",
       "name": "Layout: Padding Attribute",
@@ -2361,51 +1673,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutDimensionAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-10-19T17:18:10.155Z",
-        "updatedAt": "2024-10-19T17:18:10.537Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-19T17:18:10.537Z",
-        "firstPublishedAt": "2024-10-19T17:18:10.537Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionAttribute"
+        "type": "ContentType"
       },
       "displayField": "dimensionAttribute",
       "name": "Layout: Dimension Attribute",
@@ -2486,51 +1755,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "measurementsRelative",
-        "type": "ContentType",
-        "createdAt": "2024-10-19T17:18:11.324Z",
-        "updatedAt": "2024-10-19T17:18:11.745Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-10-19T17:18:11.745Z",
-        "firstPublishedAt": "2024-10-19T17:18:11.745Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsRelative"
+        "type": "ContentType"
       },
       "displayField": "value",
       "name": "Measurements: Relative",
@@ -2581,51 +1807,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutPositionAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-10-20T19:47:01.453Z",
-        "updatedAt": "2024-10-20T23:54:59.825Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 29,
-        "publishedAt": "2024-10-20T23:54:59.825Z",
-        "firstPublishedAt": "2024-10-20T19:47:01.987Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 15,
-        "version": 30,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionAttribute"
+        "type": "ContentType"
       },
       "displayField": "positionAttribute",
       "name": "Layout Position Attribute",
@@ -2732,51 +1915,8 @@
     },
     {
       "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "92yop6rduul9"
-          }
-        },
         "id": "layoutPositionOrientationAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-10-20T22:19:34.891Z",
-        "updatedAt": "2024-10-20T23:27:50.885Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 9,
-        "publishedAt": "2024-10-20T23:27:50.885Z",
-        "firstPublishedAt": "2024-10-20T22:19:35.290Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "publishedCounter": 5,
-        "version": 10,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionOrientationAttribute"
+        "type": "ContentType"
       },
       "displayField": "locationAttribue",
       "name": "Layout: Position Orientation Attribute",
@@ -2858,42 +1998,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 82,
-        "createdAt": "2023-11-13T19:54:30.099Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-21T01:03:12.848Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layout",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3010,46 +2119,16 @@
         }
       ]
     },
+
     {
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2023-11-13T19:54:34.865Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-13T19:54:45.480Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutItemGrid",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3084,42 +2163,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2023-11-13T19:54:39.539Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-13T19:54:47.933Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutDisplayInlineBlock",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3138,42 +2186,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2023-11-13T19:54:40.118Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-13T19:54:48.278Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutDisplayGrid",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3208,42 +2225,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 22,
-        "createdAt": "2023-11-13T19:54:40.728Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-05-06T18:39:22.468Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutDisplayFlex",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3347,42 +2333,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2023-11-13T19:54:41.390Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-13T19:54:48.966Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutDisplayBlock",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3409,42 +2364,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 10,
-        "createdAt": "2023-11-29T23:10:41.196Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-11-29T23:53:02.633Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "displayInlineFlex",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3551,42 +2475,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 20,
-        "createdAt": "2023-11-29T23:13:44.488Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-05T17:00:31.124Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "itemFlex",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3650,42 +2543,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2024-06-19T21:25:24.277Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-06-29T20:33:55.103Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "borders",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3728,42 +2590,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 16,
-        "createdAt": "2024-06-26T04:00:56.533Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-09T00:23:48.059Z",
-        "updatedBy": {
-          "sys": {
-            "id": "5ycc1mTy0xRipRZEDU9BUy",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "stylesBackgroundColor",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3795,42 +2626,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 18,
-        "createdAt": "2024-06-26T21:08:47.476Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-06-26T21:36:00.882Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "stylesOverflow",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3870,42 +2670,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 8,
-        "createdAt": "2024-06-29T19:11:20.638Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-07-01T20:46:01.504Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "stylesBoxShadow",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3929,42 +2698,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-18T22:51:31.964Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-18T22:51:34.255Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "measurementsStatic",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -3983,42 +2721,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-18T22:51:32.827Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-18T22:51:34.805Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutMarginAttribute",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4065,42 +2772,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-18T22:51:33.749Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-18T22:51:35.135Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "mesaurementBreakPoints",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4119,42 +2795,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-19T16:00:53.668Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-19T16:00:54.219Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutPaddingAttribute",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4201,42 +2846,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-19T17:18:10.895Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-19T17:18:12.559Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutDimensionAttribute",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4283,42 +2897,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-10-19T17:18:11.876Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-19T17:18:13.311Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "measurementsRelative",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4337,42 +2920,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 30,
-        "createdAt": "2024-10-20T19:47:02.254Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-20T23:55:00.497Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutPositionAttribute",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
@@ -4423,42 +2975,11 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "92yop6rduul9",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 10,
-        "createdAt": "2024-10-20T22:19:35.492Z",
-        "createdBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-10-20T23:27:51.473Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
         "contentType": {
           "sys": {
             "id": "layoutPositionOrientationAttribute",
             "type": "Link",
             "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
           }
         }
       },
