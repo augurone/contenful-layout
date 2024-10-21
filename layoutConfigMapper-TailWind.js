@@ -21,6 +21,9 @@ import {
 
     ADD:
     Background Image handling
+
+    TK:
+    Elimated most of this map, it can come from the model
 */
 const tailWindMapper = {
     backgroundColor: {
@@ -307,6 +310,10 @@ const tailWindMapper = {
     }
 };
 
+/*
+This will be refactored probably out of existence.
+@returns {string}
+*/
 const buildTWString = (conf, twMap) => {
     if (!conf || !twMap) return '';
 
@@ -344,8 +351,30 @@ const buildTWString = (conf, twMap) => {
         return `${designation} ${applyString}`;
     }, '');
 };
+/*
+@returns {[String]}
+*/
+const layoutPositionOrientation = (orientation = [{}], breakpointPrefix = '') => orientation.map(({
+    fields: {
+        locationPrefix = '',
+        locationSuffix: { fields: { value: locationSuffix = '' } = {} } = {},
+        valuePositiveOrNegative = '+'
+    } = {}
+}) => {
+    // top, right, bottom, left and static or relative value
+    const locationString = (locationPrefix && locationSuffix) ? `${locationPrefix}-${locationSuffix}` : '';
+    // has a positive or negative value
+    const locationBase = locationString && valuePositiveOrNegative !== '+' ? `${valuePositiveOrNegative}${locationString}` : locationString;
 
-const buildComplexStrings = (values = {}) => values.map(({
+    // matched break point for positionSelector
+    return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationString}` : locationBase;
+});
+
+/*
+@param {[{}]} values
+@returns {string}
+*/
+const buildComplexStrings = (values = [{}]) => values.map(({
     breakpointPrefix = '',
     positionOrientation = [],
     positionValue = '',
@@ -355,36 +384,33 @@ const buildComplexStrings = (values = {}) => values.map(({
 } = {}) => {
     // relative, absoluted, fixed, sticky w/ or w/out breakpoint
     const positionSelector = breakpointPrefix && positionValue ? `${breakpointPrefix}:${positionValue}` : positionValue;
+    // z-index for element if set, z-index: 0 is default, it is the natural stacking order
     const stackString = stacking ? `z-${stacking}` : '';
-    const orienstationString = positionSelector ? positionOrientation.map(({
-        fields: {
-            locationPrefix = '',
-            locationSuffix: { fields: { value: locationSuffix } = {} } = {},
-            valuePositiveOrNegative = '+'
-        } = {}
-    } = {}) => {
-        // top, right, bottom, left and static or relative value
-        const locationString = (locationPrefix && locationSuffix) ? `${locationPrefix}-${locationSuffix}` : '';
-        // has a positive or negative value
-        const locationBase = locationString && valuePositiveOrNegative !== '+' ? `${valuePositiveOrNegative}${locationString}` : locationString;
 
-        // matched break point for positionSelector
-        return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationString}` : locationBase;
-    }) : '';
-
+    // breakpoint: [xxs||xs||default||md||lg||xl||2xl||3xl]
+    // Position selector: [breakpoint]?:[relative||absolute||fixed||sticky]
+    // Position Orientation: [breakpoint]?:[top||right||bottom||left]-[relative||static]
+    // Stacking: [breakpoint]?:z-[0,10,20,30,40,50,60,70,80,90]
     if (positionSelector) {
-        return [positionSelector, ...orienstationString, stackString].join(' ').trim();
+        return [
+            positionSelector,
+            ...layoutPositionOrientation(positionOrientation, breakpointPrefix),
+            stackString
+        ].join(' ').trim();
     }
 
     // This applies to Dimensions, Padding, and Margin—this is the simplest form of this pattern
     const valueString = valuePrefix ? `${valuePrefix}-${valueSuffix}` : valueSuffix;
-    const valueSelector = (valueString && breakpointPrefix) ? `${breakpointPrefix}:${valueString}` : valueString;
 
-    return valueSelector;
-}).join(' ');
+    return (valueString && breakpointPrefix) ? `${breakpointPrefix}:${valueString}` : valueString;
+}).join(' ').trim();
 
-export default (configMap) => {
-    if (!configMap) return '';
+/*
+@param {Object} configMap
+@returns {string}
+*/
+export default (configMap = {}) => {
+    if (!Object.keys(configMap).length) return '';
     /*
         We just destructure here, because we either get a value or, "undefined" is a falsey to setup the next phase.
         All the type sensitivity is moved upwards
@@ -413,8 +439,20 @@ export default (configMap) => {
     const setPadding = padding ? buildComplexStrings(padding) : '';
     const setPosition = layoutPosition ? buildComplexStrings(layoutPosition) : '';
     const setDimensions = dimensions ? buildComplexStrings(dimensions) : '';
-    const cleanSelector = [setPosition, setFlow, setItem, setDimensions, setPadding, setMargin, setOverflow, setBorder, setBackground, setBoxShadow].join(' ');
 
     // Final string to be applied to a container.
-    return cleanSelector.trim();
+    // An array of strings, where each entry can be '', joined but ' ', and trimmed
+    // Final value can be  very complex or an empty string.
+    return [
+        setPosition,
+        setFlow,
+        setItem,
+        setDimensions,
+        setPadding,
+        setMargin,
+        setOverflow,
+        setBorder,
+        setBackground,
+        setBoxShadow
+    ].join(' ').trim();
 };
