@@ -23,7 +23,7 @@ import {
     Background Image handling
 
     TK:
-    Elimated most of this map, it can come from the model
+    Eliminate most of this map, it can come from the model
 */
 const tailWindMapper = {
     backgroundColor: {
@@ -367,7 +367,7 @@ const layoutPositionOrientation = (orientation = [{}], breakpointPrefix = '') =>
     const locationBase = locationString && valuePositiveOrNegative !== '+' ? `${valuePositiveOrNegative}${locationString}` : locationString;
 
     // matched break point for positionSelector
-    return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationString}` : locationBase;
+    return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationBase}` : locationBase;
 });
 
 /*
