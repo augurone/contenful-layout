@@ -10,6 +10,27 @@ This reads the layout config from a contentful component, and standardizes the c
 ## layoutConfigMapper-TailWind.js
 This receives the layoutConfig from layoutConfigs.js, and maps it to a string that is the css class declaration to be applied to the current component (container or atomic component).
 
+## Upgraded patterns for all breakpoints:
+
+### Dimension:
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[w, min-w, max-w, h, min-h, max-h, basis]-[static, relative]`
+
+### Padding:
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[p, pt, pr, pb, pl, px, py]-[static]`
+
+### Margin:
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[m, mt, nr, mb, ml, mx, my]-[static]`
+
+### Position
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[relative, absolute, sticky, fixed]`
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[top, right, bottom, left]-[static,relative]`
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:z-[0,10,20,30,40,50,60,70,80,90]`
+
+### Colors: COMING SOON
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[bg-, text-, fill-, path-]-[color]`
+
+### And then to Diplay/Flow next. 
+
 ## Importable Layout Model for Contentful
 - contentful-export_layoutModel_2024-06.json: an export from the contentful CLI
   - [Contentful Layout Models JSON](https://github.com/augurone/contenful-layout/blob/main/contentful-layout-contentype_editorinterfaces.json)
