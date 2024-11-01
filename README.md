@@ -20,7 +20,7 @@ Existing Concepts:
   * https://tailwindcss.com/docs/position
   * https://tailwindcss.com/docs/top-right-bottom-left
   * https://tailwindcss.com/docs/z-index
-* margin: fully implemented and configurable.
+* margin: fully implemented and configurable.
   * https://tailwindcss.com/docs/margin
 * overflow: default only
 * padding: fully implemented and configurable.
