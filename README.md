@@ -16,23 +16,23 @@ Existing Concepts:
 * boxShadow: default only
 * itemAttributes: partially supported at default and `md:` breakpoints
 * layoutFlow: partially supported at default and `md:` breakpoints
-* layoutPosition: fully implemented and configurable 
-  – https://tailwindcss.com/docs/position
-  – https://tailwindcss.com/docs/top-right-bottom-left
-  – https://tailwindcss.com/docs/z-index
+* layoutPosition: fully implemented and configurable
+  * https://tailwindcss.com/docs/position
+  * https://tailwindcss.com/docs/top-right-bottom-left
+  * https://tailwindcss.com/docs/z-index
 * margin: fully implemented and configurable.
-  - https://tailwindcss.com/docs/margin
+  * https://tailwindcss.com/docs/margin
 * overflow: default only
 * padding: fully implemented and configurable.
-  - https://tailwindcss.com/docs/padding
+  * https://tailwindcss.com/docs/padding
 * dimensions: fully implemented and configurable.
-  - https://tailwindcss.com/docs/width
-  - https://tailwindcss.com/docs/min-width
-  - https://tailwindcss.com/docs/max-width
-  – https://tailwindcss.com/docs/height
-  – https://tailwindcss.com/docs/min-height
-  – https://tailwindcss.com/docs/max-height
-  – https://tailwindcss.com/docs/basis
+  * https://tailwindcss.com/docs/width
+  * https://tailwindcss.com/docs/min-width
+  * https://tailwindcss.com/docs/max-width
+  * https://tailwindcss.com/docs/height
+  * https://tailwindcss.com/docs/min-height
+  * https://tailwindcss.com/docs/max-height
+  * https://tailwindcss.com/docs/basis
 
 ## Upgraded patterns for all breakpoints:
 
