@@ -1,5 +1,5 @@
 # Layouts from Contentful model
-![ComplexLayout](https://github.com/user-attachments/assets/9640ed70-a53e-4ada-8702-7ff0abe56a7f)
+![ComplexLayout](https://github.com/user-attachments/assets/6b6b8cda-d3c1-43b3-a0bc-aaa024c7452f)
 
 
 The above illustrates the benefit of making layout content. One main container containing an arrangement of other containers and atomic components are used to construct this whole layout. Where practical, this pattern should be used. Any box-model settings apply only to the direct descendants of the container, and therefore be conscientious of depth when constructing new page layoutouts.
