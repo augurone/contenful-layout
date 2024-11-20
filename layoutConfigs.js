@@ -70,20 +70,16 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         if (Array.isArray(entry) && entry.length) {
             const dimensionMap = entry.map(({
                 fields: {
-                    breakpointPrefix: { fields: { value: breakpointPrefix } = {} } = {},
+                    breakpointPrefix: { fields: { value: breakpointPrefix = '' } = {} } = {},
                     valuePrefix = '',
-                    valueSuffix: { fields: { value: valueSuffix } = {} } = {},
-                    positionValue = '',
-                    positionOrientation = [],
-                    stacking
+                    valueSuffix: { fields: { value: valueSuffix = '' } = {} } = {},
+                    ...otherProps
                 } = {}
-            }) => ({
+            } = {}) => ({
                 ...(breakpointPrefix && { breakpointPrefix }),
                 ...(valuePrefix && { valuePrefix }),
                 ...(valueSuffix && { valueSuffix }),
-                ...(positionValue && { positionValue }),
-                ...(positionOrientation.length && { positionOrientation }),
-                ...(stacking && { stacking })
+                ...(Object.entries(otherProps) && otherProps)
             }));
 
             return {

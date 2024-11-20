@@ -52,9 +52,15 @@ Existing Concepts:
 
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:z-[0,10,20,30,40,50,60,70,80,90]`
 
-### Colors: COMING SOON
+### Colors: (background exists in model currently now)
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[bg, text, fill, path]-[color]`
 - Currently this idea exists for default and md. 
+
+### Display:
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[flex, grid, block..., relatedAttrs...]`
+
+### Item:
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[self-[auto,start,end,center,stretch,baseline], justify-self-[auto,start,end,center,stretch]]`
 
 ### And then to Diplay/Flow next.
 - These are supported for the default and md: break points partially.
