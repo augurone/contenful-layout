@@ -57,15 +57,11 @@ Existing Concepts:
 - Currently this idea exists for default and md. 
 
 ### Display:
-`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[flex, grid, block..., relatedAttrs...]`
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[flex, grid, block...,]`
+`[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[relatedAttrs...]`
 
 ### Item:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[self-[auto,start,end,center,stretch,baseline], justify-self-[auto,start,end,center,stretch]]`
-
-### And then to Diplay/Flow next.
-- These are supported for the default and md: break points partially.
-
-
 
 ## Importable Layout Model for Contentful
 [Contentful Layout Models JSON](https://github.com/user-attachments/files/16397475/contentful-export_layoutModel_2024-06.json)
