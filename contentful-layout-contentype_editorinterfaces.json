@@ -2,8 +2,51 @@
   "contentTypes": [
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layout",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2023-11-13T19:54:29.686Z",
+        "updatedAt": "2024-12-08T02:32:28.610Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 109,
+        "publishedAt": "2024-12-08T02:32:28.610Z",
+        "firstPublishedAt": "2023-11-13T19:54:29.933Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 55,
+        "version": 110,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layout"
       },
       "displayField": "layoutSetup",
       "name": "Layout",
@@ -48,41 +91,50 @@
         {
           "id": "layoutFlow",
           "name": "Layout Flow (Display)",
-          "type": "Link",
+          "type": "Array",
           "localized": false,
           "required": false,
           "validations": [
-            {
-              "linkContentType": [
-                "layoutDisplayBlock",
-                "layoutDisplayFlex",
-                "layoutDisplayGrid",
-                "layoutDisplayInlineBlock",
-                "displayInlineFlex"
-              ]
-            }
           ],
           "disabled": false,
           "omitted": false,
-          "linkType": "Entry"
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutDisplayFlexAttribute",
+                  "layoutDisplayBlockAttribute",
+                  "layoutDisplayGridAttribute",
+                  "layoutDisplayHidden"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
         },
         {
           "id": "itemAttributes",
           "name": "Item Attributes",
-          "type": "Link",
+          "type": "Array",
           "localized": false,
           "required": false,
           "validations": [
-            {
-              "linkContentType": [
-                "itemFlex",
-                "layoutItemGrid"
-              ]
-            }
           ],
           "disabled": false,
           "omitted": false,
-          "linkType": "Entry"
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutItemFlexAttribute",
+                  "layoutItemGrid"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
         },
         {
           "id": "layoutPosition",
@@ -153,19 +205,24 @@
         {
           "id": "backgroundColor",
           "name": "Background Color",
-          "type": "Link",
+          "type": "Array",
           "localized": false,
           "required": false,
           "validations": [
-            {
-              "linkContentType": [
-                "stylesBackgroundColor"
-              ]
-            }
           ],
           "disabled": false,
           "omitted": false,
-          "linkType": "Entry"
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "stylesBackgroundColor"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
         },
         {
           "id": "border",
@@ -233,8 +290,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutItemGrid",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2023-11-13T19:54:34.561Z",
+        "updatedAt": "2024-12-08T00:06:06.690Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-12-08T00:06:06.690Z",
+        "firstPublishedAt": "2023-11-13T19:54:34.764Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutItemGrid"
       },
       "displayField": "itemGrid",
       "name": " Layout: Item - Grid",
@@ -253,6 +353,23 @@
           },
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
         },
         {
           "id": "alignSelf",
@@ -302,769 +419,51 @@
     },
     {
       "sys": {
-        "id": "layoutDisplayInlineBlock",
-        "type": "ContentType"
-      },
-      "displayField": "displayInline",
-      "name": "Layout: Display - Inline Block",
-      "description": "Inline Block Display option. Puts an element into the flow of 1 line of text.",
-      "fields": [
-        {
-          "id": "displayInline",
-          "name": "Display Inline",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Display Inline"
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "layoutDisplayGrid",
-        "type": "ContentType"
-      },
-      "displayField": "displayGrid",
-      "name": "Layout: Display - Grid",
-      "description": "Flow Model for Grid",
-      "fields": [
-        {
-          "id": "displayGrid",
-          "name": "Display Grid",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Display Grid"
-          },
-          "disabled": false,
-          "omitted": false
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
         },
-        {
-          "id": "gridColumns",
-          "name": "Grid Columns",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "range": {
-                "min": 1,
-                "max": 8
-              }
-            }
-          ],
-          "defaultValue": {
-            "en-US": 1
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "gap",
-          "name": "Gap",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "range": {
-                "min": 0,
-                "max": 64
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "layoutDisplayFlex",
-        "type": "ContentType"
-      },
-      "displayField": "displayFlex",
-      "name": "Layout: Display - Flex",
-      "description": "Flow Model for Flex",
-      "fields": [
-        {
-          "id": "displayFlex",
-          "name": "Flex Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexDirection",
-          "name": "Flex Direction - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "row",
-                "column",
-                "row-reverse",
-                "column-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexDirectionOverrideDefault",
-          "name": "Flex Direction: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "row",
-                "column",
-                "row-reverse",
-                "column-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexWrap",
-          "name": "Flex Wrap - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "wrap",
-                "nowrap",
-                "wrap-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexWrapOverrideDefault",
-          "name": "Flex Wrap: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "nowrap",
-                "wrap",
-                "wrap-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "justifyContent",
-          "name": "Justify Content - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "space-between",
-                "space-around",
-                "space-evenly"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "justifyContentOverrideDefault",
-          "name": "Justify Content: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "space-between",
-                "space-around",
-                "space-evenly"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignItems",
-          "name": "Align Items - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "baseline"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignItemsOverrideDefault",
-          "name": "Align Items: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "baseline"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignContent",
-          "name": "Align Content",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "space-between",
-                "space-around"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "gap",
-          "name": "Gap - Mobile (Default)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "gapOverrideDefault",
-          "name": "Gap: Override Default",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                14,
-                16,
-                20,
-                24,
-                28,
-                32,
-                36,
-                40
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "layoutDisplayBlock",
-        "type": "ContentType"
-      },
-      "displayField": "displayBlock",
-      "name": "Layout: Display - Block",
-      "description": "Display model for Block",
-      "fields": [
-        {
-          "id": "displayBlock",
-          "name": "Display Block",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Display Block"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "float",
-          "name": "float",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "none",
-                "right",
-                "left",
-                "inherit"
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": "none"
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "displayInlineFlex",
-        "type": "ContentType"
-      },
-      "displayField": "displayFlex",
-      "name": "Layout: Display - Inline Flex",
-      "description": "Flex Item attributes relative to an item, overrides defaults of items inherited from parents.",
-      "fields": [
-        {
-          "id": "displayFlex",
-          "name": "Flex Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexDirection",
-          "name": "Flex Direction - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "row",
-                "column",
-                "row-reverse",
-                "column-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexDirectionOverrideDefault",
-          "name": "Flex Direction: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "row",
-                "column",
-                "row-reverse",
-                "column-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexWrap",
-          "name": "Flex Wrap - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "wrap",
-                "nowrap",
-                "wrap-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexWrapOverrideDefault",
-          "name": "Flex Wrap: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "nowrap",
-                "wrap",
-                "wrap-reverse"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "justifyContent",
-          "name": "Justify Content - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "space-between",
-                "space-around",
-                "space-evenly"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "justifyContentOverrideDefault",
-          "name": "Justify Content: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "space-between",
-                "space-around",
-                "space-evenly"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignItems",
-          "name": "Align Items - Mobile (Default)",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "baseline"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignItemsOverrideDefault",
-          "name": "Align Items: Override Default",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "baseline"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignContent",
-          "name": "Align Content",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "flex-start",
-                "flex-end",
-                "center",
-                "stretch",
-                "space-between",
-                "space-around"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "gapMobile",
-          "name": "Gap - Mobile (Default)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "gapOverrideDefault",
-          "name": "Gap: Override Default",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "itemFlex",
-        "type": "ContentType"
-      },
-      "displayField": "flexItem",
-      "name": "Layout: Item - Flex",
-      "description": "Item Flex Attribute Overrides. ",
-      "fields": [
-        {
-          "id": "flexItem",
-          "name": "Flex Item Attributes",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "alignSelf",
-          "name": "Align Self",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "auto",
-                "flex-start",
-                "flex-end",
-                "center",
-                "baseline",
-                "stretch"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexGrow",
-          "name": "Flex Grow",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexShrink",
-          "name": "Flex Shrink",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "flexBasis",
-          "name": "Flex Basis",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": "Default is \"auto\". \"Full\" is 100%. Sets the default size of an element relative to its siblings. Accepts any valid CSS length: 111px, 23%, 17vw"
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "order",
-          "name": "Order: Mobile (Default)",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                9999,
-                -9999
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "orderOverrideDefault",
-          "name": "Order: Override Default",
-          "type": "Integer",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                -9999,
-                9999
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
         "id": "borders",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-06-19T21:25:23.740Z",
+        "updatedAt": "2024-06-29T20:33:54.542Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-06-29T20:33:54.542Z",
+        "firstPublishedAt": "2024-06-19T21:25:24.132Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/borders"
       },
       "displayField": "borderAttributes",
       "name": "Styles: Borders",
@@ -1150,8 +549,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "stylesBackgroundColor",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-06-26T04:00:56.084Z",
+        "updatedAt": "2024-12-07T21:18:39.833Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 23,
+        "publishedAt": "2024-12-07T21:18:39.833Z",
+        "firstPublishedAt": "2024-06-26T04:00:56.403Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesBackgroundColor"
       },
       "displayField": "backgroundColors",
       "name": "Styles: Background Color",
@@ -1172,98 +614,88 @@
           "omitted": false
         },
         {
-          "id": "backgroundColor",
-          "name": "Background Color Default (mobile)",
-          "type": "Symbol",
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
           "localized": false,
           "required": false,
           "validations": [
             {
-              "in": [
-                "transparent",
-                "ab-white-dark",
-                "ab-white-medium",
-                "ab-primary-dark",
-                "ab-primary-darker",
-                "primary-dark-highlight",
-                "ab-primary-medium",
-                "ab-primary-light",
-                "ab-primary-lighter",
-                "ab-primary-extra-light",
-                "ab-primary-inactive",
-                "ab-secondary-dark",
-                "ab-secondary-medium",
-                "ab-secondary-light",
-                "ab-accent-1-light",
-                "ab-accent-1-medium",
-                "ab-accent-1-dark",
-                "ab-accent-2-dark",
-                "ab-accent-2-medium",
-                "ab-accent-2-light",
-                "ab-accent-3-dark",
-                "ab-accent-3-medium",
-                "ab-accent-3-light",
-                "ab-accent-4-dark",
-                "ab-accent-4-medium",
-                "ab-accent-4-light",
-                "ab-accent-5-medium",
-                "ab-accent-6-medium",
-                "ab-accent-7-medium"
+              "linkContentType": [
+                "mesaurementBreakPoints"
               ]
             }
           ],
           "disabled": false,
-          "omitted": false
+          "omitted": false,
+          "linkType": "Entry"
         },
         {
-          "id": "backgroundColorOverride",
-          "name": "Background Color Override",
-          "type": "Symbol",
+          "id": "colorName",
+          "name": "Color Name",
+          "type": "Link",
           "localized": false,
           "required": false,
           "validations": [
             {
-              "in": [
-                "transparent",
-                "ab-primary-white",
-                "ab-primary-dark",
-                "ab-primary-darker",
-                "ab-primary-dark-highlight",
-                "ab-primary-medium",
-                "ab-primary-light",
-                "ab-primary-lighter",
-                "ab-primary-extra-light",
-                "ab-primary-inactive",
-                "ab-secondary-dark",
-                "ab-secondary-medium",
-                "ab-secondary-light",
-                "ab-accent-1-light",
-                "ab-accent-1-medium",
-                "ab-accent-1-dark",
-                "ab-accent-2-dark",
-                "ab-accent-2-medium",
-                "ab-accent-2-light",
-                "ab-accent-3-dark",
-                "ab-accent-3-medium",
-                "ab-accent-3-light",
-                "ab-accent-4-dark",
-                "ab-accent-4-medium",
-                "ab-accent-4-light",
-                "ab-accent-5-medium",
-                "ab-accent-6-medium",
-                "ab-accent-7-medium"
+              "linkContentType": [
+                "colorNames"
               ]
             }
           ],
           "disabled": false,
-          "omitted": false
+          "omitted": false,
+          "linkType": "Entry"
         }
       ]
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "stylesOverflow",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-06-26T21:08:46.992Z",
+        "updatedAt": "2024-06-26T21:36:00.236Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2024-06-26T21:36:00.236Z",
+        "firstPublishedAt": "2024-06-26T21:08:47.344Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesOverflow"
       },
       "displayField": "overflowAttributes",
       "name": " Styles: Overflow",
@@ -1352,8 +784,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "stylesBoxShadow",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-06-29T19:11:20.163Z",
+        "updatedAt": "2024-07-01T20:46:00.974Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-07-01T20:46:00.974Z",
+        "firstPublishedAt": "2024-06-29T19:11:20.493Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/stylesBoxShadow"
       },
       "displayField": "boxShadowAttributes",
       "name": "Styles: Box Shadow",
@@ -1403,8 +878,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "measurementsStatic",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-18T22:51:31.421Z",
+        "updatedAt": "2024-10-28T22:45:23.549Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-10-28T22:45:23.549Z",
+        "firstPublishedAt": "2024-10-18T22:51:31.840Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsStatic"
       },
       "displayField": "value",
       "name": "Measurements: Static",
@@ -1463,7 +981,8 @@
                 "96",
                 "content-size",
                 "ab-content-size",
-                "auto"
+                "auto",
+                "ab-max-width"
               ]
             }
           ],
@@ -1474,8 +993,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutMarginAttribute",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-18T22:51:32.321Z",
+        "updatedAt": "2024-12-08T00:06:27.669Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:06:27.669Z",
+        "firstPublishedAt": "2024-10-18T22:51:32.637Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutMarginAttribute"
       },
       "displayField": "marginAttribute",
       "name": "Layout: Margin Attribute",
@@ -1504,7 +1066,7 @@
           "validations": [
             {
               "linkContentType": [
-                "mesaurementBreakPoints"
+                "measurementBreakPoints"
               ]
             }
           ],
@@ -1555,45 +1117,51 @@
     },
     {
       "sys": {
-        "id": "mesaurementBreakPoints",
-        "type": "ContentType"
-      },
-      "displayField": "value",
-      "name": "Mesaurement: Break Points",
-      "description": "Breakpoints for Responsive Design.",
-      "fields": [
-        {
-          "id": "value",
-          "name": "Value",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "unique": true
-            },
-            {
-              "in": [
-                "xxs",
-                "xs",
-                "default",
-                "md",
-                "lg",
-                "xl",
-                "2xl",
-                "3xl"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutPaddingAttribute",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-19T16:00:52.995Z",
+        "updatedAt": "2024-12-08T00:06:46.029Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-12-08T00:06:46.029Z",
+        "firstPublishedAt": "2024-10-19T16:00:53.430Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPaddingAttribute"
       },
       "displayField": "paddingAttribute",
       "name": "Layout: Padding Attribute",
@@ -1622,7 +1190,7 @@
           "validations": [
             {
               "linkContentType": [
-                "mesaurementBreakPoints"
+                "measurementBreakPoints"
               ]
             }
           ],
@@ -1673,8 +1241,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutDimensionAttribute",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-19T17:18:10.155Z",
+        "updatedAt": "2024-12-08T00:03:12.401Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:03:12.401Z",
+        "firstPublishedAt": "2024-10-19T17:18:10.537Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDimensionAttribute"
       },
       "displayField": "dimensionAttribute",
       "name": "Layout: Dimension Attribute",
@@ -1703,7 +1314,7 @@
           "validations": [
             {
               "linkContentType": [
-                "mesaurementBreakPoints"
+                "measurementBreakPoints"
               ]
             }
           ],
@@ -1755,8 +1366,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "measurementsRelative",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-19T17:18:11.324Z",
+        "updatedAt": "2024-10-19T17:18:11.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-10-19T17:18:11.745Z",
+        "firstPublishedAt": "2024-10-19T17:18:11.745Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementsRelative"
       },
       "displayField": "value",
       "name": "Measurements: Relative",
@@ -1807,8 +1461,51 @@
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutPositionAttribute",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-20T19:47:01.453Z",
+        "updatedAt": "2024-12-18T00:57:53.122Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2024-12-18T00:57:53.122Z",
+        "firstPublishedAt": "2024-10-20T19:47:01.987Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionAttribute"
       },
       "displayField": "positionAttribute",
       "name": "Layout Position Attribute",
@@ -1837,7 +1534,7 @@
           "validations": [
             {
               "linkContentType": [
-                "mesaurementBreakPoints"
+                "measurementBreakPoints"
               ]
             }
           ],
@@ -1910,13 +1607,76 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "valuePositiveOrNegative",
+          "name": "Z-Index Value Positive or Negative ",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "+",
+                "-"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "+"
+          },
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
     {
       "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
         "id": "layoutPositionOrientationAttribute",
-        "type": "ContentType"
+        "type": "ContentType",
+        "createdAt": "2024-10-20T22:19:34.891Z",
+        "updatedAt": "2024-10-20T23:27:50.885Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-10-20T23:27:50.885Z",
+        "firstPublishedAt": "2024-10-20T22:19:35.290Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutPositionOrientationAttribute"
       },
       "displayField": "locationAttribue",
       "name": "Layout: Position Orientation Attribute",
@@ -1991,6 +1751,951 @@
           "omitted": false
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutDisplayGridAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:18.820Z",
+        "updatedAt": "2024-12-08T00:04:34.445Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:04:34.445Z",
+        "firstPublishedAt": "2024-12-07T16:17:19.249Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayGridAttribute"
+      },
+      "displayField": "title",
+      "name": "Layout: Display - Grid Attribute",
+      "description": "Flow Model for Grid",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Display Grid",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Display Grid"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "gridType",
+          "name": "Grid Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "grid",
+                "inline-grid"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "grid"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gridColumns",
+          "name": "Grid Columns",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "grid-cols-1",
+                "grid-cols-2",
+                "grid-cols-3",
+                "grid-cols-4",
+                "grid-cols-5",
+                "grid-cols-6",
+                "grid-cols-7",
+                "grid-cols-8",
+                "grid-cols-9",
+                "grid-cols-10",
+                "grid-cols-11",
+                "grid-cols-12",
+                "grid-cols-none",
+                "grid-cols-subgrid"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gap",
+          "name": "Gap",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutItemFlexAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:19.888Z",
+        "updatedAt": "2024-12-08T00:05:21.580Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:05:21.580Z",
+        "firstPublishedAt": "2024-12-07T16:17:20.310Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutItemFlexAttribute"
+      },
+      "displayField": "flexItem",
+      "name": "Layout: Item - Flex Attribute",
+      "description": "Item Flex Attribute Overrides. ",
+      "fields": [
+        {
+          "id": "flexItem",
+          "name": "Flex Item Attributes",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "alignSelf",
+          "name": "Align Self",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "self-auto",
+                "self-start",
+                "self-end",
+                "self-center",
+                "self-stretch",
+                "self-baseline"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "justifySelf",
+          "name": "Justify Self",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "justify-self-auto",
+                "justify-self-start",
+                "justify-self-end",
+                "justify-self-center",
+                "justify-self-stretch"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "flexGrow",
+          "name": "Flex Grow",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "flexShrink",
+          "name": "Flex Shrink",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "order",
+          "name": "Order",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "order-none",
+                "order-first",
+                "order-last",
+                "order-1",
+                "order-2",
+                "order-3",
+                "order-4",
+                "order-5",
+                "order-6",
+                "order-7",
+                "order-8",
+                "order-9"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutDisplayHidden",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:21.164Z",
+        "updatedAt": "2024-12-08T00:04:50.588Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:04:50.588Z",
+        "firstPublishedAt": "2024-12-07T16:17:21.606Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayHidden"
+      },
+      "displayField": "hidden",
+      "name": "Layout: Display - Hidden (display: none)",
+      "description": "Hide items from view per breakpoint",
+      "fields": [
+        {
+          "id": "hidden",
+          "name": "Hidden",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "hidden"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "hidden"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakPointPrefix",
+          "name": "Break Point Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutDisplayBlockAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:22.363Z",
+        "updatedAt": "2024-12-08T00:03:27.144Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2024-12-08T00:03:27.144Z",
+        "firstPublishedAt": "2024-12-07T16:17:22.788Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayBlockAttribute"
+      },
+      "displayField": "title",
+      "name": "Layout: Display - Block Attribute",
+      "description": "Display model for Block. https://tailwindcss.com/docs/display#block-and-inline",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Display Block",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Display Block"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "blockType",
+          "name": "Block Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "block",
+                "inline-block"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "block"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "float",
+          "name": "Float",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "float-start",
+                "float-end",
+                "float-right",
+                "float-left",
+                "float-none"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "float-none"
+          },
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "layoutDisplayFlexAttribute",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:23.400Z",
+        "updatedAt": "2024-12-08T00:03:40.955Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-12-08T00:03:40.955Z",
+        "firstPublishedAt": "2024-12-07T16:17:23.818Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/layoutDisplayFlexAttribute"
+      },
+      "displayField": "title",
+      "name": "Layout: Display - Flex Attribute",
+      "description": "Flow Model for Flex",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Flex Attributes",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "flexType",
+          "name": "Flex Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "flex",
+                "inline-flex"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "flex"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "flexDirection",
+          "name": "Flex Direction",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "flex-row",
+                "flex-row-reverse",
+                "flex-col",
+                "flex-col-reverse"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "flexWrap",
+          "name": "Flex Wrap",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "flex-wrap",
+                "flex-wrap-reverse",
+                "flex-nowrap"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "justifyContent",
+          "name": "Justify Content",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "justify-start",
+                "justify-end",
+                "justify-center",
+                "justify-between",
+                "justify-around",
+                "justify-evenly",
+                "justify-stretch",
+                "justify-normal"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "alignItems",
+          "name": "Align Items",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "items-start",
+                "items-end",
+                "items-center",
+                "items-baseline",
+                "items-stretch"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "alignContent",
+          "name": "Align Content",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "content-center",
+                "content-start",
+                "content-end",
+                "content-between",
+                "content-around",
+                "content-evenly",
+                "content-baseline",
+                "content-stretch",
+                "content-normal"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gap",
+          "name": "Gap",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "colorNames",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T16:17:24.358Z",
+        "updatedAt": "2024-12-07T16:17:24.728Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-12-07T16:17:24.728Z",
+        "firstPublishedAt": "2024-12-07T16:17:24.728Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/colorNames"
+      },
+      "displayField": "color",
+      "name": "Color Names",
+      "description": "Generic Color Names for Design System",
+      "fields": [
+        {
+          "id": "color",
+          "name": "Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "in": [
+                "transparent",
+                "ab-white-dark",
+                "ab-white-medium",
+                "ab-primary-dark",
+                "ab-primary-darker",
+                "primary-dark-highlight",
+                "ab-primary-medium",
+                "ab-primary-light",
+                "ab-primary-lighter",
+                "ab-primary-extra-light",
+                "ab-primary-inactive",
+                "ab-secondary-dark",
+                "ab-secondary-medium",
+                "ab-secondary-light",
+                "ab-accent-1-light",
+                "ab-accent-1-medium",
+                "ab-accent-1-dark",
+                "ab-accent-2-dark",
+                "ab-accent-2-medium",
+                "ab-accent-2-light",
+                "ab-accent-3-dark",
+                "ab-accent-3-medium",
+                "ab-accent-3-light",
+                "ab-accent-4-dark",
+                "ab-accent-4-medium",
+                "ab-accent-4-light",
+                "ab-accent-5-medium",
+                "ab-accent-6-medium",
+                "ab-accent-7-medium"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "92yop6rduul9"
+          }
+        },
+        "id": "measurementBreakPoints",
+        "type": "ContentType",
+        "createdAt": "2024-12-07T23:32:59.548Z",
+        "updatedAt": "2024-12-07T23:32:59.990Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-12-07T23:32:59.990Z",
+        "firstPublishedAt": "2024-12-07T23:32:59.990Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/92yop6rduul9/environments/master/content_types/measurementBreakPoints"
+      },
+      "displayField": "value",
+      "name": "Measurement: Break Points",
+      "description": "Breakpoints for Responsive Design.",
+      "fields": [
+        {
+          "id": "value",
+          "name": "Value",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "in": [
+                "xxs",
+                "xs",
+                "default",
+                "md",
+                "lg",
+                "xl",
+                "2xl",
+                "3xl"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "editorInterfaces": [
@@ -1998,11 +2703,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 110,
+        "createdAt": "2023-11-13T19:54:30.099Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T02:32:29.436Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layout",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2030,20 +2766,16 @@
           "fieldId": "layoutFlow",
           "settings": {
             "helpText": "Tells an element how to behave in relationship to its siblings &/or children. Block, Flex, Grid (sort of)....",
+            "bulkEditing": false,
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
           },
-          "widgetId": "entryCardEditor",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
           "fieldId": "itemAttributes",
-          "settings": {
-            "helpText": "Particularly for Items in Flex and Grid layouts. Overrides inheritance from container. ",
-            "showLinkEntityAction": false,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryCardEditor",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -2082,11 +2814,12 @@
         {
           "fieldId": "backgroundColor",
           "settings": {
-            "helpText": "Set a background color on the container. ",
+            "helpText": "Configure a background color per breakpoint ",
+            "bulkEditing": false,
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
           },
-          "widgetId": "entryCardEditor",
+          "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -2119,16 +2852,46 @@
         }
       ]
     },
-
     {
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-11-13T19:54:34.865Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:06:07.491Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutItemGrid",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2139,6 +2902,11 @@
             "helpText": "Title should contain \"Grid Item Attributes\" e.g. Grid Item Attributes: Card - 4 Reasons to Absorb"
           },
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -2163,391 +2931,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "contentType": {
+        "space": {
           "sys": {
-            "id": "layoutDisplayInlineBlock",
+            "id": "92yop6rduul9",
             "type": "Link",
-            "linkType": "ContentType"
+            "linkType": "Space"
           }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "displayInline",
-          "settings": {
-            "helpText": "Title should include \"Display Inline\". e.g. Display Inline: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "contentType": {
+        },
+        "version": 4,
+        "createdAt": "2024-06-19T21:25:24.277Z",
+        "createdBy": {
           "sys": {
-            "id": "layoutDisplayGrid",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
             "type": "Link",
-            "linkType": "ContentType"
+            "linkType": "User"
           }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "displayGrid",
-          "settings": {
-            "helpText": "Title should contain \"Display Grid\". e.g. Display Grid: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
         },
-        {
-          "fieldId": "gridColumns",
-          "settings": {
-            "helpText": "Number of Columns in Grid"
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "gap",
-          "settings": {
-            "helpText": "Number value, will be converted to PX. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "contentType": {
+        "updatedAt": "2024-06-29T20:33:55.103Z",
+        "updatedBy": {
           "sys": {
-            "id": "layoutDisplayFlex",
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
             "type": "Link",
-            "linkType": "ContentType"
+            "linkType": "User"
           }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "displayFlex",
-          "settings": {
-            "helpText": "Title should include \"Display Flex\" e.g. Display Flex: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
         },
-        {
-          "fieldId": "flexDirection",
-          "settings": {
-            "helpText": "Only Set this if you want the orientation to be different on phone"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexDirectionOverrideDefault",
-          "settings": {
-            "helpText": "Flex Direction: Row is Default, row should only be chosen if you have to force direction. "
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexWrap",
-          "settings": {
-            "helpText": "Mobile Wrap Behaviour for Flex Container. Only Set this if you want the way items wrap to be different on phone"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexWrapOverrideDefault",
-          "settings": {
-            "helpText": "To wrap or not to wrap the Default is nowrap"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "justifyContent",
-          "settings": {
-            "helpText": "On Mobile, Justify Content on axis. e.g. x-axis if flex-direction is row, y-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "justifyContentOverrideDefault",
-          "settings": {
-            "helpText": "Justify Content on axis. e.g. x-axis if flex-direction is row, y-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignItems",
-          "settings": {
-            "helpText": "On Mobile, Align Items on cross axis. e.g. y-axis if flex-direction is row, x-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignItemsOverrideDefault",
-          "settings": {
-            "helpText": "Align Items on cross axis. e.g. y-axis if flex-direction is row, x-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignContent",
-          "settings": {
-            "helpText": "Defaults Flex-Start, tells grouping of children how to fill vertical space. Differs from Align-Items but works on same axis."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "gap",
-          "settings": {
-            "helpText": "Gaps btwn items in container. These map directly to tailwind increments, and generally are steps of 4px"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "gapOverrideDefault",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "contentType": {
-          "sys": {
-            "id": "layoutDisplayBlock",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "displayBlock",
-          "settings": {
-            "helpText": "Title should include \"Display Block\" e.g. Display Block: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "float",
-          "settings": {
-            "helpText": "Horizontal Positioning of Item in parent. Allows for text to wrap around images, or items to stack next to each other. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "contentType": {
-          "sys": {
-            "id": "displayInlineFlex",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "displayFlex",
-          "settings": {
-            "helpText": "Title should include \"Display Flex\" e.g. Display Flex: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexDirection",
-          "settings": {
-            "helpText": "Only Set this if you want the orientation to be different on phone"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexDirectionOverrideDefault",
-          "settings": {
-            "helpText": "Flex Direction: Row is Default, row should only be chosen if you have to force direction. "
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexWrap",
-          "settings": {
-            "helpText": "Mobile Wrap Behaviour for Flex Container. Only Set this if you want the way items wrap to be different on phone"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexWrapOverrideDefault",
-          "settings": {
-            "helpText": "To wrap or not to wrap the Default is nowrap"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "justifyContent",
-          "settings": {
-            "helpText": "On Mobile, Justify Content on axis. e.g. x-axis if flex-direction is row, y-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "justifyContentOverrideDefault",
-          "settings": {
-            "helpText": "Justify Content on axis. e.g. x-axis if flex-direction is row, y-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignItems",
-          "settings": {
-            "helpText": "On Mobile, Align Items on cross axis. e.g. y-axis if flex-direction is row, x-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignItemsOverrideDefault",
-          "settings": {
-            "helpText": "Align Items on cross axis. e.g. y-axis if flex-direction is row, x-axis if flex-direction is column."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignContent",
-          "settings": {
-            "helpText": "Defaults Flex-Start, tells grouping of children how to fill vertical space. Differs from Align-Items but works on same axis."
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "gapMobile",
-          "settings": {
-            "helpText": "Gaps btwn items. Single value is applied for rows and columns (10px), two values are rows then columns (10px 20px)"
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "gapOverrideDefault",
-          "settings": {
-            "helpText": "Override Mobile (Default) gaps btwn items. Single value is applied for rows and columns (10px), two values are rows then columns (10px 20px)"
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "contentType": {
-          "sys": {
-            "id": "itemFlex",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "flexItem",
-          "settings": {
-            "helpText": "Title should include \"Display Flex\" e.g. Display Flex: Our Company - Hero"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignSelf",
-          "settings": {
-            "helpText": "This allows for a single item to break the settings of the parent without disrupting. "
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexGrow",
-          "settings": {
-            "helpText": "Default 1, will grow. A value of 0 means this item will not change size. Values >= 1 are relative measurements. An item with a value of 2 will take up approximately 2x the amount of space as an item with the value 1. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexShrink",
-          "settings": {
-            "helpText": "Default 1, will shrink. A value of 0 will not shrink. Values >= 1 are relative to other sibling values. "
-          },
-          "widgetId": "numberEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flexBasis",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "order",
-          "settings": {
-            "helpText": "Order of item in flex container. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "orderOverrideDefault",
-          "settings": {
-            "helpText": "Override default (or Mobile) order of item with in flex container. "
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
         "contentType": {
           "sys": {
             "id": "borders",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2590,11 +3009,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 20,
+        "createdAt": "2024-06-26T04:00:56.533Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-07T21:18:40.501Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "stylesBackgroundColor",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2608,16 +3058,23 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "backgroundColor",
+          "fieldId": "breakpointPrefix",
           "settings": {
-            "helpText": "Choose a background color for the container from a predefined list. "
+            "helpText": "Set breakpoint for this color. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
           },
-          "widgetId": "dropdown",
+          "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "backgroundColorOverride",
-          "widgetId": "dropdown",
+          "fieldId": "colorName",
+          "settings": {
+            "helpText": "Choose the color name to be applied",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2626,11 +3083,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2024-06-26T21:08:47.476Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-06-26T21:36:00.882Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "stylesOverflow",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2670,11 +3158,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2024-06-29T19:11:20.638Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-07-01T20:46:01.504Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "stylesBoxShadow",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2698,11 +3217,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-10-18T22:51:31.964Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-28T22:45:25.434Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "measurementsStatic",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2721,11 +3271,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-10-18T22:51:32.827Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:06:28.377Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutMarginAttribute",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2772,34 +3353,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
-        "contentType": {
+        "space": {
           "sys": {
-            "id": "mesaurementBreakPoints",
+            "id": "92yop6rduul9",
             "type": "Link",
-            "linkType": "ContentType"
+            "linkType": "Space"
           }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "value",
-          "settings": {
-            "helpText": "xxs (200px), xs (475px), md (786px), lg (1024px), xl(1280px), 2xl(1536px), 3xl (1932px)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
+        },
+        "version": 8,
+        "createdAt": "2024-10-19T16:00:53.668Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:06:46.728Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutPaddingAttribute",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2846,11 +3435,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-10-19T17:18:10.895Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:03:13.137Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutDimensionAttribute",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2897,11 +3517,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-10-19T17:18:11.876Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-19T17:18:13.311Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "measurementsRelative",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2920,11 +3571,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 36,
+        "createdAt": "2024-10-20T19:47:02.254Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-18T00:57:53.953Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutPositionAttribute",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -2968,6 +3650,14 @@
           },
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePositiveOrNegative",
+          "settings": {
+            "helpText": "Stack is positive (defauilt) of Negative. "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -2975,11 +3665,42 @@
       "sys": {
         "id": "default",
         "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2024-10-20T22:19:35.492Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-10-20T23:27:51.473Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
         "contentType": {
           "sys": {
             "id": "layoutPositionOrientationAttribute",
             "type": "Link",
             "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
           }
         }
       },
@@ -3016,6 +3737,565 @@
             "helpText": "Values for position location can be positive (+) or negative (-). Teh defauly is Positive. "
           },
           "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-12-07T16:17:19.484Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:04:35.523Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutDisplayGridAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Title should contain \"Display Grid\". e.g. Display Grid: Our Company - Hero"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gridType",
+          "settings": {
+            "helpText": "Grid Type: Grid is default and most common, inline-grid is pretty specialized. "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gridColumns",
+          "settings": {
+            "helpText": "Set Number of COlumns in Grid. https://tailwindcss.com/docs/grid-template-columns"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gap",
+          "settings": {
+            "helpText": "Define the space between items in the grid. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-12-07T16:17:20.554Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:05:22.376Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutItemFlexAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "flexItem",
+          "settings": {
+            "helpText": "Item Flex: breakpoint: [values]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "alignSelf",
+          "settings": {
+            "helpText": "Align Item in Flex Container cross axis (y if row(x), and x if column(y) ). https://tailwindcss.com/docs/align-self"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "justifySelf",
+          "settings": {
+            "helpText": "Align Item in Flex Container on the axis. (with Row, or Column). https://tailwindcss.com/docs/justify-self"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flexGrow",
+          "settings": {
+            "helpText": "Allow Item in Flex Container to Stretch along the Flex Axis (row(default) or column). Default behaviour is to not Grow. https://tailwindcss.com/docs/flex-grow",
+            "trueLabel": "grow",
+            "falseLabel": "grow-0"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flexShrink",
+          "settings": {
+            "helpText": "Allow Item in Flex Container to Shrink along the Flex Axis (row(default) or column). Default behaviour is to not Shrink. https://tailwindcss.com/docs/flex-shrink",
+            "trueLabel": "shrink",
+            "falseLabel": "shrink-0"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-12-07T16:17:21.980Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:04:51.517Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutDisplayHidden",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "hidden",
+          "settings": {
+            "helpText": "Hidden, no breakpoint is default, otherwse set a breakpoint. "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakPointPrefix",
+          "settings": {
+            "helpText": "Select breakpoint: The default is equivalent to mobile, if more than on breakpoint is used. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 16,
+        "createdAt": "2024-12-07T16:17:22.988Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:03:27.884Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutDisplayBlockAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Display Block: {breakpoint} {block-type} {float}"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "Select the applicable breakpoint. No breakpoint is default and is also the basis of mobile layouts when combined with other breakpoints. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blockType",
+          "settings": {
+            "helpText": "Display Block: Default is \"block.\" Giveselement actual space in the flow. Float tells other content how to move around this object. e.g. text wrapping an image (inline), or multiple items lining up with eachother (block). "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "float",
+          "settings": {
+            "helpText": "Horizontal Positioning of Item in parent. Allows for text to wrap around images, or items to stack next to each other. https://tailwindcss.com/docs/float"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2024-12-07T16:17:24.025Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-08T00:03:41.641Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutDisplayFlexAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Title should include \"Display Flex\" e.g. Display Flex: Our Company - Hero"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "No break point is default, in the layout system the default also serves as the mobile breakpoint. https://tailwindcss.com/docs/responsive-design",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flexType",
+          "settings": {
+            "helpText": "Flex Type: Flex is the default and most common, very occasionally inline flex is needed. "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flexDirection",
+          "settings": {
+            "helpText": "This sets the main axis of the flex container. X is row, Y is column. https://tailwindcss.com/docs/flex-direction"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flexWrap",
+          "settings": {
+            "helpText": "Wrap Behaviour for Flex Container. Default is no wrap. https://tailwindcss.com/docs/flex-wrap"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "justifyContent",
+          "settings": {
+            "helpText": "Justify Content on axis. e.g. x-axis if flex-direction is row, y-axis if flex-direction is column. https://tailwindcss.com/docs/justify-content"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "alignItems",
+          "settings": {
+            "helpText": "Align Items on cross axis. e.g. y-axis if flex-direction is row, x-axis if flex-direction is column. https://tailwindcss.com/docs/align-items"
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "alignContent",
+          "settings": {
+            "helpText": "Tells grouping of children how to fill main axis on wrap (x-row,  y-col). Defaults to Flex-Start. https://tailwindcss.com/docs/align-content"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gap",
+          "settings": {
+            "helpText": "Space between elements in container. Currently only suports equal gaps for columns and rows. https://tailwindcss.com/docs/gap",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-12-07T16:17:24.925Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-07T16:17:27.603Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "colorNames",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "color",
+          "settings": {
+            "helpText": "Set of Color Names pertinent to this design system"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "92yop6rduul9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-12-07T23:33:00.168Z",
+        "createdBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-12-07T23:33:00.579Z",
+        "updatedBy": {
+          "sys": {
+            "id": "7MIl0BcR3Ah8fY4zLnOzsH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "measurementBreakPoints",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "value",
+          "settings": {
+            "helpText": "xxs (200px), xs (475px), md (786px), lg (1024px), xl(1280px), 2xl(1536px), 3xl (1932px)"
+          },
+          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         }
       ]

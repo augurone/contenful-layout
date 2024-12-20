@@ -35,7 +35,7 @@ const getLabelFromSysMetaData = ({
 };
 
 export const layoutConfig = ({ fields = {} } = {}) => {
-    if (!Object.keys(fields).length) return undefined;
+    if (!Object.keys(fields).length) return '';
 
     const layoutRawConfig = Object.entries(fields);
 

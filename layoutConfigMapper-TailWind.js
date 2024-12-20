@@ -39,19 +39,19 @@ const buildTWString = (conf, twMap) => {
     if (!conf || !twMap) return '';
 
     const configName = getConfigLabel(conf);
-    const tailWindConf = twMap[configName];
-    const { twValue = '' } = tailWindConf || {};
+    const { [configName]: tailWindConf = {} } = twMap;
+    const { twValue = '' } = tailWindConf;
 
     if (!tailWindConf) return '';
 
     return Object.entries(conf).reduce((designation, [label, value]) => {
         if (!label) return designation;
 
-        const twVal = tailWindConf[value];
+        const { [value]: twVal = '' } = tailWindConf;
 
         if (twVal) return twVal;
 
-        const twAttr = tailWindConf[label];
+        const { [label]: twAttr = '' } = tailWindConf;
 
         if (!twAttr) return designation;
 
@@ -151,7 +151,7 @@ const layoutPositionOrientation = (orientation = [{}], breakpointPrefix = '') =>
     // top, right, bottom, left and static or relative value
     const locationString = (locationPrefix && locationSuffix) ? `${locationPrefix}-${locationSuffix}` : '';
     // has a positive or negative value
-    const locationBase = locationString && valuePositiveOrNegative !== '+' ? `${valuePositiveOrNegative}${locationString}` : locationString;
+    const locationBase = locationString && valuePositiveOrNegative !== '+' ? `-${locationString}` : locationString;
 
     // matched break point for positionSelector
     return locationBase && breakpointPrefix ? `${breakpointPrefix}:${locationBase}` : locationBase;
@@ -165,6 +165,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
     positionOrientation = [],
     positionValue = '',
     stacking = '',
+    valuePositiveOrNegative: stackingPositiveOrNegative = '+',
     valuePrefix = '',
     valueSuffix = ''
 } = {}) => {
@@ -172,6 +173,8 @@ const buildComplexStrings = (values = [{}]) => values.map(({
     const positionSelector = breakpointPrefix && positionValue ? `${breakpointPrefix}:${positionValue}` : positionValue;
     // z-index for element if set, z-index: 0 is default, it is the natural stacking order
     const stackString = stacking ? `z-${stacking}` : '';
+    const stackStringMod = stackString && stackingPositiveOrNegative !== '+' ? `-${stackString}` : stackString;
+    const stackStringFinal = stackStringMod || stackString;
 
     // breakpoint: [xxs||xs||default||md||lg||xl||2xl||3xl]
     // Position selector: [breakpoint]?:[relative||absolute||fixed||sticky]
@@ -181,7 +184,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
         return [
             positionSelector,
             ...layoutPositionOrientation(positionOrientation, breakpointPrefix),
-            stackString
+            stackStringFinal
         ].join(' ').trim();
     }
 
@@ -220,7 +223,7 @@ export default (configMap = {}) => {
     const setOverflow = overflow ? buildTWString(overflow, tailWindMapper.overflow) : '';
 
     // Final string to be applied to a container.
-    // An array of strings, where each entry can be '', joined but ' ', and trimmed
+    // An array of strings, where each entry can be '', joined by ' ', and trimmed
     // Final value can be  very complex or an empty string.
     return [
         buildComplexStrings(layoutPosition),
@@ -233,5 +236,5 @@ export default (configMap = {}) => {
         setBorder,
         buildColor(backgroundColor),
         setBoxShadow
-    ].join(' ').trim();
+    ].join(' ').replace(/\s{2,}/g, ' ').trim();
 };
