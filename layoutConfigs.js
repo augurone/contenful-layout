@@ -22,9 +22,9 @@ export const getConfigLabel = (config = {}) => {
 const getLabelFromSysMetaData = ({
     contentType: {
         sys: {
-            id
-        } = {}
-    } = {}
+            id,
+        } = {},
+    } = {},
 } = {}) => {
     if (!id) return '';
 
@@ -43,14 +43,14 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         styleConfig,
         [
             layoutTreeItemLabel,
-            entry = {}
-        ] = []
+            entry = {},
+        ] = [],
     ) => {
         // This covers all cases in the model where only one config is allowed
         // layoutFlow, layoutPosition, layoutItem
         const {
             fields: layoutTreeItemFields,
-            sys = {}
+            sys = {},
         } = entry;
 
         const appliedLabel = layoutTreeItemLabel || getLabelFromSysMetaData(sys);
@@ -61,7 +61,7 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         if (layoutTreeItemFields) {
             return {
                 ...styleConfig,
-                [appliedLabel]: layoutTreeItemFields
+                [appliedLabel]: layoutTreeItemFields,
             };
         }
 
@@ -74,17 +74,17 @@ export const layoutConfig = ({ fields = {} } = {}) => {
                     valuePrefix = '',
                     valueSuffix: { fields: { value: valueSuffix = '' } = {} } = {},
                     ...otherProps
-                } = {}
+                } = {},
             } = {}) => ({
                 ...(breakpointPrefix && { breakpointPrefix }),
                 ...(valuePrefix && { valuePrefix }),
                 ...(valueSuffix && { valueSuffix }),
-                ...(Object.entries(otherProps) && otherProps)
+                ...(Object.entries(otherProps) && otherProps),
             }));
 
             return {
                 ...styleConfig,
-                [appliedLabel]: dimensionMap
+                [appliedLabel]: dimensionMap,
             };
         }
 

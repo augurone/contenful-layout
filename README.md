@@ -2,7 +2,17 @@
 ![ComplexLayout](https://github.com/user-attachments/assets/6b6b8cda-d3c1-43b3-a0bc-aaa024c7452f)
 
 
-The above illustrates the benefit of making layout content. One main container containing an arrangement of other containers and atomic components are used to construct this whole layout. Where practical, this pattern should be used. Any box-model settings apply only to the direct descendants of the container, and therefore be conscientious of depth when constructing new page layoutouts.
+The above illustrates the benefit of making layout content. One main container containing an arrangement of other containers and atomic components are used to construct this whole layout. Where practical, this pattern should be used. Any box-model settings apply only to the direct descendants of the container, and therefore be conscientious of depth when constructing new page layoutouts.'
+
+## use
+```js
+import { layoutConfig } from 'contentful-layout';
+
+layoutConfig(layout);
+
+// returns a string of tailwind utility classes flex flex-col items-center justify-center....
+```
+
 
 ## layoutConfigs.js
 This reads the layout config from the page component fields being read into the system, and standardizes the config to be handed off to a specific mapper. In this case layoutConfigMapper-TailWind, but techincally any similar system could be used.
@@ -64,4 +74,7 @@ Existing Concepts:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[self-[auto,start,end,center,stretch,baseline], justify-self-[auto,start,end,center,stretch]]`
 
 ## Importable Layout Model for Contentful
-[Contentful Layout Models JSON](https://github.com/user-attachments/files/16397475/contentful-export_layoutModel_2024-06.json)
+### Model Data:
+`support/contentful-layout-contentypes_editorinterfaces.json`
+### Contentful Models for import, just enter in your SpaceId and TOken
+`support/import-contentModel-layout.json`
