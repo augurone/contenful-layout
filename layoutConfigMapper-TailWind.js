@@ -2,7 +2,8 @@
 // The name of this title field is very relative, but the value is not
 const getConfigLabel = (config = {}) => {
     // For Padding and Margin this field name indicates if the config is for Mobile, Tablet, Desktop
-    // For Layout flow this field name is the display Property for the element. e.g. `displayFlex` would
+    // For Layout flow this field name is the display Property for the element.
+    // e.g. `displayFlex` would
     // map to a `display: flex` classname.
     // Extract first [attrName, attrValue] pair, then the first item from that pair.
     const [[labelName = ''] = []] = Object.entries(config) || [];
@@ -11,8 +12,8 @@ const getConfigLabel = (config = {}) => {
 };
 /*
     * Remanider of legacy pattern. Receives values and maps them to tailwind utility classes.
-    * This was actually an evoltion of the initial pattern, I do like it. It standardized on common values
-    * that sent me towards the common value models (e.g. measurements, colors),
+    * This was actually an evoltion of the initial pattern, I do like it. It standardized
+    * on common values that sent me towards the common value models (e.g. measurements, colors),
     * And landed on the more predominant patterns starting with buildColor.
     * Will eventually refactor this and buildTWString out.
 */
