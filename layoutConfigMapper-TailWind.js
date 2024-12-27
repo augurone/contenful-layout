@@ -212,8 +212,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
 export default (configMap = {}) => {
     if (!Object.keys(configMap).length) return '';
     /*
-        We just destructure here, because we either get a value or, "undefined" is a falsey to setup the next phase.
-        All the type sensitivity is moved upwards
+        Items from config to be processed. Most items default to [], otherwise undefined for the legacy items.
     */
     const {
         color = [],

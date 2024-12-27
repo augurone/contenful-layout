@@ -12,8 +12,9 @@ export const getConfigLabel = (config = {}) => {
 };
 
 /*
+ * To be deprecated
  * This is the name of the "content model"
- * ContentFul is awesome in that if something does not have a value it does not send it.
+ * Contentful is awesome in that if something does not have a value it does not send it.
  * This assures that no necessary items get missed, if a user has not published an item
  it can exist w/o a "title" and we miss the attribute we are looking for.
  * considering moving the label to this anyway, but the model is reliable,
@@ -46,9 +47,7 @@ export const layoutConfig = ({ fields = {} } = {}) => {
             entry = {},
         ] = [],
     ) => {
-        // This covers all cases in the model where only one config is allowed
-        // layoutFlow, layoutPosition, layoutItem
-        const {
+        // This is the legacy pattern, and will be deprecated.
             fields: layoutTreeItemFields,
             sys = {},
         } = entry;
@@ -66,7 +65,7 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         }
 
         // This covers all cases in the model where more than one entry is allowed
-        // padding, margin, dimensions
+        // padding, margin, dimensions, position, background color...
         if (Array.isArray(entry) && entry.length) {
             const dimensionMap = entry.map(({
                 fields: {
@@ -88,7 +87,7 @@ export const layoutConfig = ({ fields = {} } = {}) => {
             };
         }
 
-        // Currently, anything that is not an Object or an Array is exraneous
+        // Currently, anything that is not an Object or an Array is extraneous
         // return turn accumluator as is.
         return styleConfig;
     }, {});
