@@ -47,7 +47,10 @@ export const layoutConfig = ({ fields = {} } = {}) => {
             entry = {},
         ] = [],
     ) => {
-        // This is the legacy pattern, and will be deprecated.
+        // This covers all cases in the model where only one config is allowed
+        // layoutFlow, layoutPosition, layoutItem
+        const {
+            // This is the legacy pattern, and will be deprecated.
             fields: layoutTreeItemFields,
             sys = {},
         } = entry;
