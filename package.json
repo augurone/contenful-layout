@@ -1,7 +1,13 @@
 {
   "name": "contenful-layout",
-  "version": "0.1.6",
+  "version": "0.1.11",
   "description": "Recieves Layout Data model from a connection to the Conentful API, translates it into tailwind utility classes. ",
+  "exports": {
+    ".": "./index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
   "keywords": [
     "Contentful",
     "TailwindCSS",
@@ -20,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/augurone/contenful-layout.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "main": "index.js",
   "scripts": {

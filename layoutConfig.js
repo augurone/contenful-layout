@@ -1,16 +1,5 @@
 import layoutConfigMapperTailWind from './layoutConfigMapper-TailWind';
 
-// Each config has a "Title field" comfing from Contentful
-// The name of this title field is very relative, but the value is not
-export const getConfigLabel = (config = {}) => {
-    // For Padding and Margin this field name indicates if the config is for Mobile, Tablet, Desktop
-    // For Layout flow this field name is the display Property for the element. e.g. `displayFlex` would map to a `display: flex` classname.
-    // Extract first [attrName, attrValue] pair, then the first item from that pair.
-    const [[labelName = ''] = []] = Object.entries(config) || [];
-
-    return labelName;
-};
-
 /*
  * To be deprecated
  * This is the name of the "content model"
@@ -34,8 +23,10 @@ const getLabelFromSysMetaData = ({
 
     return `${firstChar}${appendage}`;
 };
-
-export const layoutConfig = ({ fields = {} } = {}) => {
+/*
+    Main Actor here
+*/
+const layoutConfig = ({ fields = {} } = {}) => {
     if (!Object.keys(fields).length) return '';
 
     const layoutRawConfig = Object.entries(fields);
@@ -47,7 +38,10 @@ export const layoutConfig = ({ fields = {} } = {}) => {
             entry = {},
         ] = [],
     ) => {
-        // This is the legacy pattern, and will be deprecated.
+        // This covers all cases in the model where only one config is allowed
+        // layoutFlow, layoutPosition, layoutItem
+        const {
+            // This is the legacy pattern, and will be deprecated.
             fields: layoutTreeItemFields,
             sys = {},
         } = entry;
@@ -94,3 +88,6 @@ export const layoutConfig = ({ fields = {} } = {}) => {
 
     return layoutConfigMapperTailWind(buildConfig);
 };
+
+
+export default layoutConfig;
