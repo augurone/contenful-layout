@@ -28,7 +28,7 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "./layoutConfig.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
