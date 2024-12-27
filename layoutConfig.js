@@ -1,4 +1,5 @@
-import layoutConfigMapperTailWind from './layoutConfigMapper-TailWind';
+// eslint-disable-next-line import/extensions
+import layoutConfigMapperTailWind from './layoutConfigMapper-TailWind.js';
 
 /*
  * To be deprecated
