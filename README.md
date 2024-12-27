@@ -6,7 +6,7 @@ The above illustrates the benefit of making layout content. One main container c
 
 ## use
 ```js
-import { layoutConfig } from 'contentful-layout';
+import layoutConfig from 'contentful-layout';
 
 layoutConfig(layout);
 
