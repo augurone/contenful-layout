@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/augurone/contenful-layout.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "main": "index.js",
   "scripts": {
