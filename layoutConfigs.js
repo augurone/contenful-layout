@@ -12,8 +12,9 @@ export const getConfigLabel = (config = {}) => {
 };
 
 /*
+ * To be deprecated
  * This is the name of the "content model"
- * ContentFul is awesome in that if something does not have a value it does not send it.
+ * Contentful is awesome in that if something does not have a value it does not send it.
  * This assures that no necessary items get missed, if a user has not published an item
  it can exist w/o a "title" and we miss the attribute we are looking for.
  * considering moving the label to this anyway, but the model is reliable,
@@ -22,9 +23,9 @@ export const getConfigLabel = (config = {}) => {
 const getLabelFromSysMetaData = ({
     contentType: {
         sys: {
-            id
-        } = {}
-    } = {}
+            id,
+        } = {},
+    } = {},
 } = {}) => {
     if (!id) return '';
 
@@ -43,14 +44,12 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         styleConfig,
         [
             layoutTreeItemLabel,
-            entry = {}
-        ] = []
+            entry = {},
+        ] = [],
     ) => {
-        // This covers all cases in the model where only one config is allowed
-        // layoutFlow, layoutPosition, layoutItem
-        const {
+        // This is the legacy pattern, and will be deprecated.
             fields: layoutTreeItemFields,
-            sys = {}
+            sys = {},
         } = entry;
 
         const appliedLabel = layoutTreeItemLabel || getLabelFromSysMetaData(sys);
@@ -61,12 +60,12 @@ export const layoutConfig = ({ fields = {} } = {}) => {
         if (layoutTreeItemFields) {
             return {
                 ...styleConfig,
-                [appliedLabel]: layoutTreeItemFields
+                [appliedLabel]: layoutTreeItemFields,
             };
         }
 
         // This covers all cases in the model where more than one entry is allowed
-        // padding, margin, dimensions
+        // padding, margin, dimensions, position, background color...
         if (Array.isArray(entry) && entry.length) {
             const dimensionMap = entry.map(({
                 fields: {
@@ -74,21 +73,21 @@ export const layoutConfig = ({ fields = {} } = {}) => {
                     valuePrefix = '',
                     valueSuffix: { fields: { value: valueSuffix = '' } = {} } = {},
                     ...otherProps
-                } = {}
+                } = {},
             } = {}) => ({
                 ...(breakpointPrefix && { breakpointPrefix }),
                 ...(valuePrefix && { valuePrefix }),
                 ...(valueSuffix && { valueSuffix }),
-                ...(Object.entries(otherProps) && otherProps)
+                ...(Object.entries(otherProps) && otherProps),
             }));
 
             return {
                 ...styleConfig,
-                [appliedLabel]: dimensionMap
+                [appliedLabel]: dimensionMap,
             };
         }
 
-        // Currently, anything that is not an Object or an Array is exraneous
+        // Currently, anything that is not an Object or an Array is extraneous
         // return turn accumluator as is.
         return styleConfig;
     }, {});

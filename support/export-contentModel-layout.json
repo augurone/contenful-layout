@@ -2,11 +2,8 @@
     "spaceId": "",
     "environmentId": "master",
     "managementToken": "",
-    "queryEntries": "layout",
     "skipContentModel": "false",
     "skipEditorInterfaces": "false",
-    "skipContent": "true",
     "skipRoles": "true",
-    "skipTags": "true",
-    "skipWebhooks": "true"
+    "skipTags": "false"
 }

@@ -1,6 +1,4 @@
-import {
-    getConfigLabel
-} from './layoutConfigs';
+import { getConfigLabel } from './layoutConfigs';
 
 /*
     * Remanider of legacy pattern. Receives values and maps them to tailwind utility classes.
@@ -14,21 +12,21 @@ const tailWindMapper = {
         borderAttributes: {
             borderColor: val => `border-${val}`,
             borderRadius: val => (val === 'rounded' ? val : `rounded-${val}`),
-            borderWidth: val => val
-        }
+            borderWidth: val => val,
+        },
     },
     boxShadow: {
         boxShadowAttributes: {
-            boxShadow: val => val
-        }
+            boxShadow: val => val,
+        },
     },
     overflow: {
         overflowAttributes: {
             overflow: val => `overflow-${val}`,
             overflowX: val => `overflow-x-${val}`,
-            overflowY: val => `overflow-Y-${val}`
-        }
-    }
+            overflowY: val => `overflow-Y-${val}`,
+        },
+    },
 };
 
 /*
@@ -78,20 +76,33 @@ const buildTWString = (conf, twMap) => {
     @param {String} prefix
     @returns {string}
 */
-const buildColor = (colors = [{}], prefix = 'bg-') => colors.map(({
+const buildColor = (colors = [{}]) => colors.map(({
     breakpointPrefix = '',
-    colorName: { fields: { color = '' } = {} } = {},
-    opacity
-}) => {
-    if (!color) return '';
+    colorType = 'bg',
+    backgroundOpacity = '',
+    color: [
+        {
+            colorName: [{
+                fields: {
+                    colorFamily = '',
+                    colorValue = '',
+                } = {},
+            } = {}] = [],
+        } = {},
+    ] = [],
+} = {
 
-    const colorStr = `${prefix}${color}`;
+}) => {
+    if (!colorFamily || !colorValue) return 'badColorConfig';
+
+    const colorStr = `${colorType}-${colorFamily}-${colorValue}`;
+    const colorWOpacity = backgroundOpacity ? `${colorStr}/${backgroundOpacity}` : `${colorStr}`;
 
     if (breakpointPrefix) {
-        return !opacity ? `${breakpointPrefix}:${colorStr}` : `${breakpointPrefix}:${colorStr}/${opacity}`;
+        return `${breakpointPrefix}:${colorWOpacity}`;
     }
 
-    return opacity ? `${colorStr}/${opacity}` : `${colorStr}`;
+    return colorWOpacity;
 }).join(' ');
 /*
     @param {[{}]} flowConfigs
@@ -107,7 +118,7 @@ const buildFlow = (flowConfigs = [{}]) => flowConfigs.map(({
 
         if (name === 'gap') {
             const {
-                fields: { value: gapVal = '' } = {}
+                fields: { value: gapVal = '' } = {},
             } = value;
 
             return breakpointPrefix ? `${flowStr} ${breakpointPrefix}:gap-${gapVal}` : `${flowStr} gap-${gapVal}`;
@@ -128,7 +139,7 @@ const buildItemAttrs = (itemAttributes = [{}]) => itemAttributes.map(({
     justifySelf = '',
     grow = '',
     shrink = '',
-    order = ''
+    order = '',
 } = {}) => {
     const baseStr = `${alignSelf} ${justifySelf} ${grow} ${shrink} ${order}`.trim();
 
@@ -145,8 +156,8 @@ const layoutPositionOrientation = (orientation = [{}], breakpointPrefix = '') =>
     fields: {
         locationPrefix = '',
         locationSuffix: { fields: { value: locationSuffix = '' } = {} } = {},
-        valuePositiveOrNegative = '+'
-    } = {}
+        valuePositiveOrNegative = '+',
+    } = {},
 }) => {
     // top, right, bottom, left and static or relative value
     const locationString = (locationPrefix && locationSuffix) ? `${locationPrefix}-${locationSuffix}` : '';
@@ -167,7 +178,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
     stacking = '',
     valuePositiveOrNegative: stackingPositiveOrNegative = '+',
     valuePrefix = '',
-    valueSuffix = ''
+    valueSuffix = '',
 } = {}) => {
     // relative, absoluted, fixed, sticky w/ or w/out breakpoint
     const positionSelector = breakpointPrefix && positionValue ? `${breakpointPrefix}:${positionValue}` : positionValue;
@@ -184,7 +195,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
         return [
             positionSelector,
             ...layoutPositionOrientation(positionOrientation, breakpointPrefix),
-            stackStringFinal
+            stackStringFinal,
         ].join(' ').trim();
     }
 
@@ -201,11 +212,10 @@ const buildComplexStrings = (values = [{}]) => values.map(({
 export default (configMap = {}) => {
     if (!Object.keys(configMap).length) return '';
     /*
-        We just destructure here, because we either get a value or, "undefined" is a falsey to setup the next phase.
-        All the type sensitivity is moved upwards
+        Items from config to be processed. Most items default to [], otherwise undefined for the legacy items.
     */
     const {
-        backgroundColor = [],
+        color = [],
         border,
         boxShadow,
         itemAttributes = [],
@@ -214,7 +224,7 @@ export default (configMap = {}) => {
         margin = [],
         overflow = [],
         padding = [],
-        dimensions = []
+        dimensions = [],
     } = configMap;
 
     // concepts to be refactored
@@ -234,7 +244,7 @@ export default (configMap = {}) => {
         buildComplexStrings(margin),
         setOverflow,
         setBorder,
-        buildColor(backgroundColor),
-        setBoxShadow
+        buildColor(color),
+        setBoxShadow,
     ].join(' ').replace(/\s{2,}/g, ' ').trim();
 };
