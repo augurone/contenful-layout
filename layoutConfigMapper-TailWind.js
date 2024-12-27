@@ -219,7 +219,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
 @param {Object} configMap
 @returns {string}
 */
-export default (configMap = {}) => {
+const layoutConfigMapperTailWind = (configMap = {}) => {
     if (!Object.keys(configMap).length) return '';
     /*
         Items from config to be processed. Most items default to [], otherwise undefined for the legacy items.
@@ -258,3 +258,5 @@ export default (configMap = {}) => {
         setBoxShadow,
     ].join(' ').replace(/\s{2,}/g, ' ').trim();
 };
+
+export default layoutConfigMapperTailWind;
