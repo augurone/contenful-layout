@@ -1,6 +1,6 @@
 {
   "name": "contenful-layout",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Recieves Layout Data model from a connection to the Conentful API, translates it into tailwind utility classes. ",
   "keywords": [
     "Contentful",
