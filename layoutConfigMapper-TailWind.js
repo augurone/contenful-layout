@@ -90,16 +90,14 @@ const buildColor = (colors = [{}]) => colors.map(({
     breakpointPrefix = '',
     colorType = 'bg',
     backgroundOpacity = '',
-    color: [
-        {
-            colorName: [{
-                fields: {
-                    colorFamily = '',
-                    colorValue = '',
-                } = {},
-            } = {}] = [],
+    color: {
+        colorName: {
+            fields: {
+                colorFamily = '',
+                colorValue = '',
+            } = {},
         } = {},
-    ] = [],
+    } = {},
 } = {
 
 }) => {
