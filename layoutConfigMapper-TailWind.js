@@ -97,9 +97,10 @@ const buildColor = (colors = [{}]) => colors.map(({
         } = {},
     } = {},
 } = {}) => {
-    if (!colorFamily || !colorValue) return 'badColorConfig';
+    if (!colorFamily) return 'badColorConfig';
 
-    const colorStr = `${colorType}-${colorFamily}-${colorValue}`;
+    const colorBase = colorValue ? `${colorFamily}-${colorValue}` : colorFamily;
+    const colorStr = `${colorType}-${colorBase}`;
     const colorWOpacity = backgroundOpacity ? `${colorStr}/${backgroundOpacity}` : `${colorStr}`;
 
     if (breakpointPrefix) {
