@@ -86,7 +86,7 @@ const buildTWString = (conf, twMap) => {
     @param {String} prefix
     @returns {string}
 */
-const buildColor = (colors = [{}]) => colors.map((c{
+const buildColor = (colors = [{}]) => colors.map(({
     colorType = 'bg',
     backgroundOpacity = '',
     breakpointPrefix = '',
