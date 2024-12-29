@@ -87,23 +87,20 @@ const buildTWString = (conf, twMap) => {
     @returns {string}
 */
 const buildColor = (colors = [{}]) => colors.map(({
-    breakpointPrefix = '',
     colorType = 'bg',
     backgroundOpacity = '',
+    breakpointPrefix = '',
     color: {
-        colorName: {
-            fields: {
-                colorFamily = '',
-                colorValue = '',
-            } = {},
+        fields: {
+            colorFamily = '',
+            colorValue = '',
         } = {},
     } = {},
-} = {
+} = {}) => {
+    if (!colorFamily) return 'badColorConfig';
 
-}) => {
-    if (!colorFamily || !colorValue) return 'badColorConfig';
-
-    const colorStr = `${colorType}-${colorFamily}-${colorValue}`;
+    const colorBase = colorValue ? `${colorFamily}-${colorValue}` : colorFamily;
+    const colorStr = `${colorType}-${colorBase}`;
     const colorWOpacity = backgroundOpacity ? `${colorStr}/${backgroundOpacity}` : `${colorStr}`;
 
     if (breakpointPrefix) {
