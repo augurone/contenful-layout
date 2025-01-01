@@ -21,8 +21,11 @@ This reads the layout config from the page component fields being read into the 
 This receives the layoutConfig from layoutConfigs.js, and maps it to a string that is the css class declaration to be applied to the current component (container or atomic component).
 
 Existing Concepts:
-* backgroundColor: fully implemented and configurable
+* Apply Color: fully implemented and configurable
   * https://tailwindcss.com/docs/background-color
+  * https://tailwindcss.com/docs/text-color
+  * https://tailwindcss.com/docs/fill
+  * https://tailwindcss.com/docs/stroke
 * border: default only
 * boxShadow: default only
 * itemAttributes: fully implemented and configurable for flex-items
