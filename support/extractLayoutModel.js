@@ -3,7 +3,7 @@ import fs from 'fs';
 const {
     contentTypes,
     editorInterfaces,
-} = JSON.parse(fs.readFileSync('contentful-export-8g9vc93je04m-master-2024-12-24T12-10-32.json', 'utf-8'));
+} = JSON.parse(fs.readFileSync('', 'utf-8'));
 
 const layoutProps = [
     'borders',

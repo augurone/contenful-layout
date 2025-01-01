@@ -181,7 +181,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
     positionOrientation = [],
     positionValue = '',
     stacking = '',
-    valuePositiveOrNegative: stackingPositiveOrNegative = '+',
+    valuePositiveOrNegative = '+',
     valuePrefix = '',
     valueSuffix = '',
 } = {}) => {
@@ -189,7 +189,7 @@ const buildComplexStrings = (values = [{}]) => values.map(({
     const positionSelector = breakpointPrefix && positionValue ? `${breakpointPrefix}:${positionValue}` : positionValue;
     // z-index for element if set, z-index: 0 is default, it is the natural stacking order
     const stackString = stacking ? `z-${stacking}` : '';
-    const stackStringMod = stackString && stackingPositiveOrNegative !== '+' ? `-${stackString}` : stackString;
+    const stackStringMod = stackString && valuePositiveOrNegative !== '+' ? `-${stackString}` : stackString;
     const stackStringFinal = stackStringMod || stackString;
 
     // breakpoint: [xxs||xs||default||md||lg||xl||2xl||3xl]
@@ -206,8 +206,9 @@ const buildComplexStrings = (values = [{}]) => values.map(({
 
     // This applies to Dimensions, Padding, and Margin—this is the simplest form of this pattern
     const valueString = valuePrefix ? `${valuePrefix}-${valueSuffix}` : valueSuffix;
+    const valueMod = valuePrefix && valuePositiveOrNegative !== '+' ? `-${valueString}` : valueString;
 
-    return (valueString && breakpointPrefix) ? `${breakpointPrefix}:${valueString}` : valueString;
+    return (valueMod && breakpointPrefix) ? `${breakpointPrefix}:${valueMod}` : valueMod;
 }).join(' ').trim();
 
 /*
