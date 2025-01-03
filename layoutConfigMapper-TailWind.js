@@ -227,11 +227,11 @@ const layoutConfigMapperTailWind = (configMap = {}) => {
         itemAttributes = [],
         layoutFlow = [],
         layoutPosition = [],
-        margin = [],
         overflow = [],
-        padding = [],
         dimensions = [],
+        whiteSpace = [],
     } = configMap;
+
 
     // concepts to be refactored
     const setBorder = border ? buildTWString(border, tailWindMapper.border) : '';
@@ -246,8 +246,7 @@ const layoutConfigMapperTailWind = (configMap = {}) => {
         buildFlow(layoutFlow),
         buildItemAttrs(itemAttributes),
         buildComplexStrings(dimensions),
-        buildComplexStrings(padding),
-        buildComplexStrings(margin),
+        buildComplexStrings(whiteSpace),
         setOverflow,
         setBorder,
         buildColor(color),
