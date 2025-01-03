@@ -41,11 +41,10 @@ Existing Concepts:
   * https://tailwindcss.com/docs/position
   * https://tailwindcss.com/docs/top-right-bottom-left
   * https://tailwindcss.com/docs/z-index
-* margin: fully implemented and configurable.
+* whitespace: margin & padding fully implemented and configurable.
   * https://tailwindcss.com/docs/margin
-* overflow: default only
-* padding: fully implemented and configurable.
   * https://tailwindcss.com/docs/padding
+* overflow: default only
 * dimensions: fully implemented and configurable.
   * https://tailwindcss.com/docs/width
   * https://tailwindcss.com/docs/min-width
@@ -60,10 +59,11 @@ Existing Concepts:
 ### Dimension:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[w, min-w, max-w, h, min-h, max-h, basis]-[static, relative]`
 
-### Padding:
+### White Space
+####  Padding:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[p, pt, pr, pb, pl, px, py]-[static]`
 
-### Margin:
+####  Margin:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[m, mt, nr, mb, ml, mx, my]-[static]`
 
 ### Position
@@ -73,9 +73,8 @@ Existing Concepts:
 
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:z-[0,10,20,30,40,50,60,70,80,90]`
 
-### Colors: (background exists in model currently now)
+### Colors: fully supported
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[bg, text, fill, path]-[color]`
-- Currently this idea exists for default and md. 
 
 ### Display:
 `[xxs, xs, default, md, lg, xl, 2xl, 3xl]:[flex, grid, block...,]`

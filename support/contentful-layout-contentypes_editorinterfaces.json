@@ -411,7 +411,7 @@
         "id": "layout",
         "type": "ContentType",
         "createdAt": "2024-12-21T19:39:23.225Z",
-        "updatedAt": "2024-12-21T21:24:37.504Z",
+        "updatedAt": "2025-01-03T18:37:31.770Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -419,8 +419,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-12-21T21:24:37.504Z",
+        "publishedVersion": 15,
+        "publishedAt": "2025-01-03T18:37:31.770Z",
         "firstPublishedAt": "2024-12-21T19:39:26.148Z",
         "createdBy": {
           "sys": {
@@ -436,8 +436,8 @@
             "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -553,8 +553,8 @@
           }
         },
         {
-          "id": "padding",
-          "name": "Padding",
+          "id": "whiteSpace",
+          "name": "White Space",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -566,28 +566,7 @@
             "validations": [
               {
                 "linkContentType": [
-                  "layoutPaddingAttribute"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "margin",
-          "name": "Margin",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "layoutMarginAttribute"
+                  "layoutWhiteSpaceAttribute"
                 ]
               }
             ],
@@ -1698,274 +1677,6 @@
             "id": "8g9vc93je04m"
           }
         },
-        "id": "layoutMarginAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-12-21T19:39:24.716Z",
-        "updatedAt": "2025-01-01T01:50:58.686Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2025-01-01T01:50:58.686Z",
-        "firstPublishedAt": "2024-12-21T19:39:30.057Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutMarginAttribute"
-      },
-      "displayField": "marginAttribute",
-      "name": "Layout: Margin Attribute",
-      "description": "Setup Layout properties for element margin with all the tailwind default margin prefixes, break points, and static measurements. \nhttps://tailwindcss.com/docs/margin",
-      "fields": [
-        {
-          "id": "marginAttribute",
-          "name": "Margin: [breakpoint:marginSuffix-value]",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpointPrefix",
-          "name": "Breakpoint Prefix",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measurementBreakPoints"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "valuePrefix",
-          "name": "Value Prefix",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "m",
-                "mt",
-                "mr",
-                "mb",
-                "ml",
-                "mx",
-                "my"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "valueSuffix",
-          "name": "Value Suffix",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measurementsStatic"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "valuePositiveOrNegative",
-          "name": "Margin Value Positive or Negative",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "+",
-                "-"
-              ]
-            }
-          ],
-          "defaultValue": {
-            "en-US": "+"
-          },
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "8g9vc93je04m"
-          }
-        },
-        "id": "layoutPaddingAttribute",
-        "type": "ContentType",
-        "createdAt": "2024-12-21T19:39:24.683Z",
-        "updatedAt": "2024-12-21T19:39:30.459Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 1,
-        "publishedAt": "2024-12-21T19:39:30.459Z",
-        "firstPublishedAt": "2024-12-21T19:39:30.459Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "69tH2XbtNYs4Xbvwdhhs0a"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutPaddingAttribute"
-      },
-      "displayField": "paddingAttribute",
-      "name": "Layout: Padding Attribute",
-      "description": "Setup Layout properties for element padding with all the tailwind default padding prefixes, break points, and static measurements. \nhttps://tailwindcss.com/docs/padding",
-      "fields": [
-        {
-          "id": "paddingAttribute",
-          "name": "Padding: [breakpoint:paddingSuffix-value]",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpointPrefix",
-          "name": "Breakpoint Prefix",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measurementBreakPoints"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "valuePrefix",
-          "name": "Value Prefix",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "p",
-                "pt",
-                "pr",
-                "pb",
-                "pl",
-                "px",
-                "py"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "valueSuffix",
-          "name": "Value Suffix",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measurementsStatic"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "8g9vc93je04m"
-          }
-        },
         "id": "layoutPositionAttribute",
         "type": "ContentType",
         "createdAt": "2024-12-21T19:39:24.701Z",
@@ -2244,6 +1955,157 @@
               ]
             }
           ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "layoutWhiteSpaceAttribute",
+        "type": "ContentType",
+        "createdAt": "2025-01-03T18:01:24.562Z",
+        "updatedAt": "2025-01-03T18:10:26.546Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2025-01-03T18:10:26.546Z",
+        "firstPublishedAt": "2025-01-03T18:01:25.104Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutWhiteSpaceAttribute"
+      },
+      "displayField": "whiteSpaceAttribute",
+      "name": "Layout: WhiteSpace Attribute",
+      "description": "Setup Layout properties for element padding/margin with all the tailwind default prefixes, break points, and static measurements. \nhttps://tailwindcss.com/docs/margin\nhttps://tailwindcss.com/docs/padding",
+      "fields": [
+        {
+          "id": "whiteSpaceAttribute",
+          "name": "{Margin|Padding}: [breakpoint:marginSuffix-value]",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpointPrefix",
+          "name": "Breakpoint Prefix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementBreakPoints"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePrefix",
+          "name": "Value Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "m",
+                "mt",
+                "mr",
+                "mb",
+                "ml",
+                "mx",
+                "my",
+                "p",
+                "pt",
+                "pr",
+                "pb",
+                "pl",
+                "px",
+                "py"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "valueSuffix",
+          "name": "Value Suffix",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measurementsStatic"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "valuePositiveOrNegative",
+          "name": "Margin Value Positive or Negative",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "+",
+                "-"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "+"
+          },
           "disabled": false,
           "omitted": false
         }
@@ -2995,7 +2857,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 16,
         "createdAt": "2024-12-21T19:39:26.325Z",
         "createdBy": {
           "sys": {
@@ -3004,7 +2866,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-12-21T21:24:38.381Z",
+        "updatedAt": "2025-01-03T18:37:32.391Z",
         "updatedBy": {
           "sys": {
             "id": "69tH2XbtNYs4Xbvwdhhs0a",
@@ -3075,20 +2937,9 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "padding",
+          "fieldId": "whiteSpace",
           "settings": {
-            "helpText": "Add internal padding to container. ",
-            "bulkEditing": false,
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryCardsEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "margin",
-          "settings": {
-            "helpText": "Margin Settings: This should be used rarely to setup margins for an element. ",
+            "helpText": "Add Padding and/or Margin settings for any breakpoint. ",
             "bulkEditing": false,
             "showLinkEntityAction": true,
             "showCreateEntityAction": true
@@ -3756,178 +3607,6 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2024-12-21T19:39:30.237Z",
-        "createdBy": {
-          "sys": {
-            "id": "69tH2XbtNYs4Xbvwdhhs0a",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-01-01T01:50:59.592Z",
-        "updatedBy": {
-          "sys": {
-            "id": "69tH2XbtNYs4Xbvwdhhs0a",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutMarginAttribute",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "marginAttribute",
-          "settings": {
-            "helpText": "Name of Padding Setting. Padding: [breakpoint:dimension-value]"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "breakpointPrefix",
-          "settings": {
-            "helpText": "Select Breakpoint Value",
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "valuePrefix",
-          "settings": {
-            "helpText": "Margin Prefixes from tailwind m (all around margin), mt (Margin Top), mr (Margin Right), mb (Margin Bottom), ml (Margin Left), mx (ml & mr), my(mt & mb)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "valueSuffix",
-          "settings": {
-            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "valuePositiveOrNegative",
-          "settings": {
-            "helpText": "Set margin to Negative Value (Positive Default)"
-          },
-          "widgetId": "radio",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "8g9vc93je04m",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 2,
-        "createdAt": "2024-12-21T19:39:30.656Z",
-        "createdBy": {
-          "sys": {
-            "id": "69tH2XbtNYs4Xbvwdhhs0a",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2024-12-21T19:39:40.250Z",
-        "updatedBy": {
-          "sys": {
-            "id": "69tH2XbtNYs4Xbvwdhhs0a",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPaddingAttribute",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "paddingAttribute",
-          "settings": {
-            "helpText": "Name of Padding Setting. Padding: [breakpoint:dimension-value]"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "breakpointPrefix",
-          "settings": {
-            "helpText": "Select Breakpoint Value",
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "valuePrefix",
-          "settings": {
-            "helpText": "Choose where the padding should go pt (Padding Top), pr (Padding Right), pb (Padding Bottom), pl (Padding Left), px (pl and pr), py (pt and pb)"
-          },
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "valueSuffix",
-          "settings": {
-            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": true
-          },
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "8g9vc93je04m",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
         "version": 2,
         "createdAt": "2024-12-21T19:39:32.112Z",
         "createdBy": {
@@ -4085,6 +3764,96 @@
           "fieldId": "valuePositiveOrNegative",
           "settings": {
             "helpText": "Values for position location can be positive (+) or negative (-). Teh defauly is Positive. "
+          },
+          "widgetId": "radio",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2025-01-03T18:01:25.270Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-01-03T18:10:27.549Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutWhiteSpaceAttribute",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "whiteSpaceAttribute",
+          "settings": {
+            "helpText": "Name of Padding Setting. Padding: [breakpoint:dimension-value]"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpointPrefix",
+          "settings": {
+            "helpText": "Select Breakpoint Value",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePrefix",
+          "settings": {
+            "helpText": "Prefixes from tailwind m/p (all around), mt/pt (Top), mr/mr (Right), mb/pb (Bottom), ml/pl (Left), mx/px (l & r), my/py(t & b)"
+          },
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valueSuffix",
+          "settings": {
+            "helpText": "Choose the actual measurement: Static Values are Pixel Values, Relative Values are generally %. ",
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "valuePositiveOrNegative",
+          "settings": {
+            "helpText": "Set margin to Negative Value (Positive Default), negative values do not work with padding. "
           },
           "widgetId": "radio",
           "widgetNamespace": "builtin"
