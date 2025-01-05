@@ -138,15 +138,23 @@ const buildFlow = (flowConfigs = [{}]) => flowConfigs.map(({
     @param {[{}]} layout configs from the content model.
     @returns {String} flat string of item attribute utility classes.
 */
+/*
+    @param {[{}]} layout configs from the content model.
+    @returns {String} flat string of item attribute utility classes.
+*/
 const buildItemAttrs = (itemAttributes = [{}]) => itemAttributes.map(({
     breakpointPrefix = '',
     alignSelf = '',
     justifySelf = '',
-    grow = '',
-    shrink = '',
+    flexGrow,
+    flexShrink,
     order = '',
 } = {}) => {
-    const baseStr = `${alignSelf} ${justifySelf} ${grow} ${shrink} ${order}`.trim();
+    const grow = flexGrow ? 'grow' : '';
+    const useGrow = !grow && flexGrow !== undefined ? 'grow-0' : grow;
+    const shrink = flexShrink ? 'shink' : '';
+    const useShrink = !shrink && flexShrink !== undefined ? 'shrink-0' : shrink;
+    const baseStr = `${alignSelf} ${justifySelf} ${useGrow} ${useShrink} ${order}`.trim();
 
     if (breakpointPrefix && baseStr) return baseStr.split(' ').map((setting = '') => `${breakpointPrefix}:${setting}`).join(' ').trim();
 
