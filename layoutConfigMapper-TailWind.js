@@ -18,13 +18,6 @@ const getConfigLabel = (config = {}) => {
     * Will eventually refactor this and buildTWString out.
 */
 const tailWindMapper = {
-    border: {
-        borderAttributes: {
-            borderColor: val => `border-${val}`,
-            borderRadius: val => (val === 'rounded' ? val : `rounded-${val}`),
-            borderWidth: val => val,
-        },
-    },
     boxShadow: {
         boxShadowAttributes: {
             boxShadow: val => val,
@@ -109,6 +102,25 @@ const buildColor = (colors = [{}]) => colors.map(({
 
     return colorWOpacity;
 }).join(' ');
+/*
+    @param {[{}]} borderProps
+    @returns {string}
+*/
+const buildBorder = ({
+    borderColor: {
+        fields: {
+            colorType = '',
+            color: {
+                fields: {
+                    colorFamily = '',
+                    colorValue = '',
+                } = {},
+            } = {},
+        } = {},
+    } = {},
+    borderRadius = '',
+    borderWidth = '',
+} = {}) => [borderWidth, borderRadius, `${colorType}-${colorFamily}-${colorValue}`].join(' ').trim();
 /*
     @param {[{}]} flowConfigs
     @returns {string}
@@ -240,9 +252,8 @@ const layoutConfigMapperTailWind = (configMap = {}) => {
         whiteSpace = [],
     } = configMap;
 
-
     // concepts to be refactored
-    const setBorder = border ? buildTWString(border, tailWindMapper.border) : '';
+    const setBorder = border ? buildBorder(border) : '';
     const setBoxShadow = boxShadow ? buildTWString(boxShadow, tailWindMapper.boxShadow) : '';
     const setOverflow = overflow ? buildTWString(overflow, tailWindMapper.overflow) : '';
 
@@ -256,7 +267,7 @@ const layoutConfigMapperTailWind = (configMap = {}) => {
         buildComplexStrings(dimensions),
         buildComplexStrings(whiteSpace),
         setOverflow,
-        setBorder,
+        buildBorder(border),
         buildColor(color),
         setBoxShadow,
     ].join(' ').replace(/\s{2,}/g, ' ').trim();
