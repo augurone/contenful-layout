@@ -253,7 +253,6 @@ const layoutConfigMapperTailWind = (configMap = {}) => {
     } = configMap;
 
     // concepts to be refactored
-    const setBorder = border ? buildBorder(border) : '';
     const setBoxShadow = boxShadow ? buildTWString(boxShadow, tailWindMapper.boxShadow) : '';
     const setOverflow = overflow ? buildTWString(overflow, tailWindMapper.overflow) : '';
 
