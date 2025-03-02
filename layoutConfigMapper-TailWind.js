@@ -120,7 +120,7 @@ const buildBorder = ({
     } = {},
     borderRadius = '',
     borderWidth = '',
-} = {}) => [borderWidth, borderRadius, `${colorType}-${colorFamily}-${colorValue}`].join(' ').trim();
+} = {}) => [borderWidth, `rounded-${borderRadius}`, `${colorType}-${colorFamily}-${colorValue}`].join(' ').trim();
 /*
     @param {[{}]} flowConfigs
     @returns {string}
