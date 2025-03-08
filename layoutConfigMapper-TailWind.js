@@ -109,7 +109,7 @@ const buildColor = (colors = [{}]) => colors.map(({
 const buildBorder = ({
     borderColor: {
         fields: {
-            colorType = '',
+            colorType = 'border',
             color: {
                 fields: {
                     colorFamily = '',
@@ -120,7 +120,12 @@ const buildBorder = ({
     } = {},
     borderRadius = '',
     borderWidth = '',
-} = {}) => [borderWidth, `rounded-${borderRadius}`, `${colorType}-${colorFamily}-${colorValue}`].join(' ').trim();
+} = {}) => {
+    const rounded = borderRadius ? `rounded-${borderRadius}` : '';
+    const color = (colorFamily && colorValue) ? `${colorType}-${colorFamily}-${colorValue}` : '';
+
+    return [borderWidth, rounded, color].join(' ').trim();
+};
 /*
     @param {[{}]} flowConfigs
     @returns {string}
