@@ -125,19 +125,25 @@ const mapPosition = atom => ({
 });
 
 /**
- * Maps a flow atom into a descriptor.
+ * Maps a flow atom into multiple descriptors (one per class).
  * @param {AtomFields} atom
- * @returns {{ breakpoint: string, parts: string[] }}
+ * @returns {{ breakpoint: string, parts: string[] }[]}
  */
-const mapFlow = atom => ({
-    breakpoint: extractBreakpoint(atom),
-    parts: [
+const mapFlow = atom => {
+    const breakpoint = extractBreakpoint(atom);
+    const flowClasses = [
         atom.display,
         atom.alignPrefix && atom.alignValue && `${atom.alignPrefix}-${atom.alignValue}`,
         atom.overflowPrefix && atom.overflowValue && `${atom.overflowPrefix}-${atom.overflowValue}`,
         atom.order && `order-${atom.order}`,
-    ].filter(Boolean),
-});
+    ].filter(Boolean);
+
+    // Return array of descriptors, one for each class
+    return flowClasses.map(flowClass => ({
+        breakpoint,
+        parts: [flowClass],
+    }));
+};
 
 /**
  * Maps a grid atom into a descriptor.
@@ -228,8 +234,14 @@ const normalizeLayout = (layoutEntry = {}) => {
     ];
 
     return groupMap
-        .flatMap(([groupId, mapper]) =>
-            collectGroup(layoutFields, groupId).map(mapper))
+        .flatMap(([groupId, mapper]) => {
+            const atoms = collectGroup(layoutFields, groupId);
+            if (groupId === 'flow') {
+                // mapFlow returns arrays, so we need to flatten them
+                return atoms.flatMap(mapper);
+            }
+            return atoms.map(mapper);
+        })
         .filter(({ parts }) => parts.some(Boolean));
 };
 
