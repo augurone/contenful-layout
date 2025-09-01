@@ -1,12 +1,12 @@
 {
   "name": "contenful-layout",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "description": "Recieves Layout Data model from a connection to the Conentful API, translates it into tailwind utility classes. ",
   "exports": {
     ".": "./index.js"
   },
   "bin": {
-    "contenful-layout": "./index.js"
+    "contenful-layout": "index.js"
   },
   "engines": {
     "node": ">=16"
@@ -16,11 +16,13 @@
     "TailwindCSS",
     "WebComponents"
   ],
-  "author": {
-    "name": "Artikulates Publishing",
-    "email": "augur@artikulates.com"
-  },
-  "contributors": ["Chad Augur <https://github.com/augurone>"],
+  "author": "Artikulates Publishing <augur@artikulates.com>",
+  "contributors": [
+    {
+      "name": "Chad Augur",
+      "email": "https://github.com/augurone"
+    }
+  ],
   "homepage": "https://github.com/augurone/contenful-layout#readme",
   "bugs": {
     "url": "https://github.com/augurone/contenful-layout/issues"
@@ -34,5 +36,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "contentful-management": "^11.53.0"
   }
 }
