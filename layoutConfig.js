@@ -130,7 +130,7 @@ const mapPosition = atom => ({
  */
 const mapFlow = ({
     alignPrefix,
-    alignValue
+    alignValue,
     containerFlow,
     display,
     order,
