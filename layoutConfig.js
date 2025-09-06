@@ -120,7 +120,6 @@ const mapPosition = atom => ({
     parts: [
         atom.negative ? `-${atom.prefix}` : atom.prefix,
         extractMeasurement(atom),
-        atom.float,
     ],
 });
 
@@ -129,13 +128,22 @@ const mapPosition = atom => ({
  * @param {AtomFields} atom
  * @returns {{ breakpoint: string, parts: string[] }[]}
  */
-const mapFlow = atom => {
+const mapFlow = ({
+    alignPrefix,
+    alignValue
+    containerFlow,
+    display,
+    order,
+    overflowPrefix,
+    overflowValue
+}) => {
     const breakpoint = extractBreakpoint(atom);
     const flowClasses = [
-        atom.display,
-        atom.alignPrefix && atom.alignValue && `${atom.alignPrefix}-${atom.alignValue}`,
-        atom.overflowPrefix && atom.overflowValue && `${atom.overflowPrefix}-${atom.overflowValue}`,
-        atom.order && `order-${atom.order}`,
+        display,
+        containerFlow,
+        alignPrefix && alignValue && `${alignPrefix}-${alignValue}`,
+        overflowPrefix && overflowValue && `${overflowPrefix}-${overflowValue}`,
+        order && `order-${order}`,
     ].filter(Boolean);
 
     // Return array of descriptors, one for each class

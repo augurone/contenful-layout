@@ -6,13 +6,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
         "id": "opacityToken",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:20.862Z",
-        "updatedAt": "2025-06-08T04:32:10.043Z",
+        "createdAt": "2025-06-14T23:58:05.989Z",
+        "updatedAt": "2025-06-22T17:49:57.869Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,33 +20,33 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:32:10.043Z",
-        "firstPublishedAt": "2025-06-08T04:00:20.803Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:49:57.869Z",
+        "firstPublishedAt": "2025-06-14T23:58:08.662Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/opacityToken"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/opacityToken"
       },
       "displayField": "value",
       "name": "Token - Opacity",
@@ -93,13 +93,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
-        "id": "measureToken",
+        "id": "layoutPosition",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:20.870Z",
-        "updatedAt": "2025-06-09T03:11:51.299Z",
+        "createdAt": "2025-06-14T23:58:06.000Z",
+        "updatedAt": "2025-09-06T22:18:46.593Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -107,33 +107,177 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-06-09T03:11:51.299Z",
-        "firstPublishedAt": "2025-06-08T04:00:14.277Z",
+        "publishedVersion": 9,
+        "publishedAt": "2025-09-06T22:18:46.593Z",
+        "firstPublishedAt": "2025-06-14T23:58:10.338Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "publishedCounter": 5,
-        "version": 13,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/measureToken"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutPosition"
+      },
+      "displayField": "title",
+      "name": "Layout - Position",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpoint",
+          "name": "Breakpoint",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "breakpointToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "prefix",
+          "name": "Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "relative",
+                "absolute",
+                "fixed",
+                "sticky",
+                "static",
+                "inset",
+                "inset-x",
+                "inset-y",
+                "top",
+                "right",
+                "bottom",
+                "left",
+                "z"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "negative",
+          "name": "Negative",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "measurement",
+          "name": "Measurement",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measureToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "measureToken",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:06.007Z",
+        "updatedAt": "2025-06-27T18:53:13.674Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2025-06-27T18:53:13.674Z",
+        "firstPublishedAt": "2025-06-14T23:58:09.058Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/measureToken"
       },
       "displayField": "value",
       "name": "Token - Measurements",
@@ -193,10 +337,15 @@
                 "56",
                 "60",
                 "64",
+                "68",
                 "72",
+                "76",
                 "80",
+                "88",
+                "84",
                 "96",
-                "screen"
+                "screen",
+                "360"
               ]
             }
           ],
@@ -211,13 +360,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
         "id": "breakpointToken",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:20.882Z",
-        "updatedAt": "2025-06-08T04:32:00.577Z",
+        "createdAt": "2025-06-14T23:58:06.010Z",
+        "updatedAt": "2025-06-22T17:49:58.999Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -225,33 +374,33 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:32:00.577Z",
-        "firstPublishedAt": "2025-06-08T04:00:06.800Z",
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-22T17:49:58.999Z",
+        "firstPublishedAt": "2025-06-14T23:58:09.375Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/breakpointToken"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/breakpointToken"
       },
       "displayField": "value",
       "name": "Token - Breakpoint",
@@ -265,21 +414,19 @@
           "required": true,
           "validations": [
             {
+              "unique": true
+            },
+            {
               "in": [
                 "default",
                 "xxs",
                 "xs",
-                "s",
-                "sm",
                 "md",
                 "lg",
                 "xl",
                 "2xl",
                 "3xl"
               ]
-            },
-            {
-              "unique": true
             }
           ],
           "disabled": false,
@@ -293,13 +440,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
         "id": "layoutSpacing",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.019Z",
-        "updatedAt": "2025-06-08T04:31:40.191Z",
+        "createdAt": "2025-06-14T23:58:06.039Z",
+        "updatedAt": "2025-06-22T17:49:59.702Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -307,33 +454,33 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:40.191Z",
-        "firstPublishedAt": "2025-06-08T03:59:38.110Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:49:59.702Z",
+        "firstPublishedAt": "2025-06-14T23:58:09.875Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/layoutSpacing"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutSpacing"
       },
       "displayField": "title",
       "name": "Layout - Spacing",
@@ -450,175 +597,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
-          }
-        },
-        "id": "layoutPosition",
-        "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.030Z",
-        "updatedAt": "2025-06-08T04:31:35.270Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:35.270Z",
-        "firstPublishedAt": "2025-06-08T03:59:33.483Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/layoutPosition"
-      },
-      "displayField": "title",
-      "name": "Layout - Position",
-      "description": null,
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpoint",
-          "name": "Breakpoint",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "breakpointToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "prefix",
-          "name": "Prefix",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "relative",
-                "absolute",
-                "fixed",
-                "sticky",
-                "static",
-                "inset",
-                "inset-x",
-                "inset-y",
-                "top",
-                "right",
-                "bottom",
-                "left",
-                "z"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "negative",
-          "name": "Negative",
-          "type": "Boolean",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "defaultValue": {
-            "en-US": false
-          },
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "measurement",
-          "name": "Measurement",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measureToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "float",
-          "name": "Float",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "in": [
-                "left",
-                "right",
-                "none"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
         "id": "layoutGrid",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.041Z",
-        "updatedAt": "2025-06-09T03:16:02.444Z",
+        "createdAt": "2025-06-14T23:58:06.847Z",
+        "updatedAt": "2025-06-22T17:50:00.109Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -626,33 +611,33 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-06-09T03:16:02.444Z",
-        "firstPublishedAt": "2025-06-08T03:59:28.697Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:00.109Z",
+        "firstPublishedAt": "2025-06-14T23:58:10.804Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 5,
-        "version": 13,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/layoutGrid"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutGrid"
       },
       "displayField": "title",
       "name": "Layout - Grid",
@@ -770,13 +755,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
-        "id": "layoutFlow",
+        "id": "styleBorder",
         "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.045Z",
-        "updatedAt": "2025-06-08T04:31:26.363Z",
+        "createdAt": "2025-06-14T23:58:06.875Z",
+        "updatedAt": "2025-06-22T17:50:00.609Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -784,33 +769,166 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:26.363Z",
-        "firstPublishedAt": "2025-06-08T03:59:24.103Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:00.609Z",
+        "firstPublishedAt": "2025-06-14T23:58:12.329Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 2,
-        "version": 7,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/layoutFlow"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/styleBorder"
+      },
+      "displayField": "title",
+      "name": "Style - Border",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpoint",
+          "name": "Breakpoint",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "breakpointToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "prefix",
+          "name": "Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "border",
+                "border-x",
+                "border-y",
+                "border-t",
+                "border-r",
+                "border-b",
+                "border-l",
+                "rounded",
+                "rounded-t",
+                "rounded-r",
+                "rounded-b",
+                "rounded-l",
+                "rounded-tl",
+                "rounded-tr",
+                "rounded-bl",
+                "rounded-br"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "measurement",
+          "name": "Width/Radius",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "measureToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "layoutFlow",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:06.894Z",
+        "updatedAt": "2025-09-06T21:19:32.671Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2025-09-06T21:19:32.671Z",
+        "firstPublishedAt": "2025-06-14T23:58:11.176Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layoutFlow"
       },
       "displayField": "title",
       "name": "Layout - Flow",
@@ -849,7 +967,7 @@
         },
         {
           "id": "display",
-          "name": "Display",
+          "name": "Display (block, flex, grid...)",
           "type": "Symbol",
           "localized": false,
           "required": false,
@@ -864,12 +982,33 @@
                 "flex",
                 "inline-flex",
                 "grid",
-                "inline-grid",
-                "flex-row",
-                "flex-col",
+                "inline-grid"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "containerFlow",
+          "name": "Container Flow (wrap, no-wrap, float-left...)",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
                 "flex-wrap",
+                "flex-nowrap",
+                "flex-col",
+                "flex-row",
+                "flex-col-reverse",
                 "flex-row-reverse",
-                "flex-col-reverse"
+                "float-left",
+                "float-right",
+                "float-start",
+                "float-end",
+                "float-none"
               ]
             }
           ],
@@ -997,661 +1136,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "whywicumr0iw"
-          }
-        },
-        "id": "layout",
-        "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.948Z",
-        "updatedAt": "2025-06-08T04:31:21.256Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:21.256Z",
-        "firstPublishedAt": "2025-06-08T03:59:18.557Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/layout"
-      },
-      "displayField": "name",
-      "name": "Layout",
-      "description": null,
-      "fields": [
-        {
-          "id": "name",
-          "name": "Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "spacing",
-          "name": "Spacing",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "layoutSpacing"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "position",
-          "name": "Position",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "layoutPosition"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "flow",
-          "name": "Flow",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "layoutFlow"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "grid",
-          "name": "Grid",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "layoutGrid"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "border",
-          "name": "Border",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "styleBorder"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "color",
-          "name": "Color",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "styleColor"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        },
-        {
-          "id": "shadow",
-          "name": "Shadow",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "styleShadow"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "whywicumr0iw"
-          }
-        },
-        "id": "styleShadow",
-        "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.968Z",
-        "updatedAt": "2025-06-08T04:31:55.489Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:55.489Z",
-        "firstPublishedAt": "2025-06-08T03:59:57.664Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/styleShadow"
-      },
-      "displayField": "title",
-      "name": "Style - Shadow",
-      "description": null,
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpoint",
-          "name": "Breakpoint",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "breakpointToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "value",
-          "name": "Shadow",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "sm",
-                "md",
-                "lg",
-                "xl",
-                "2xl",
-                "inner",
-                "none"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "whywicumr0iw"
-          }
-        },
-        "id": "styleBorder",
-        "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.972Z",
-        "updatedAt": "2025-06-08T04:31:45.516Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:45.516Z",
-        "firstPublishedAt": "2025-06-08T03:59:46.034Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/styleBorder"
-      },
-      "displayField": "title",
-      "name": "Style - Border",
-      "description": null,
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpoint",
-          "name": "Breakpoint",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "breakpointToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "prefix",
-          "name": "Prefix",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "border",
-                "border-x",
-                "border-y",
-                "border-t",
-                "border-r",
-                "border-b",
-                "border-l",
-                "rounded",
-                "rounded-t",
-                "rounded-r",
-                "rounded-b",
-                "rounded-l",
-                "rounded-tl",
-                "rounded-tr",
-                "rounded-bl",
-                "rounded-br"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "measurement",
-          "name": "Width/Radius",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "measureToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "whywicumr0iw"
-          }
-        },
-        "id": "styleColor",
-        "type": "ContentType",
-        "createdAt": "2025-06-07T20:42:21.981Z",
-        "updatedAt": "2025-06-08T04:31:50.738Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2025-06-08T04:31:50.738Z",
-        "firstPublishedAt": "2025-06-08T03:59:51.066Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
-          }
-        },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/styleColor"
-      },
-      "displayField": "title",
-      "name": "Style - Color",
-      "description": null,
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "breakpoint",
-          "name": "Breakpoint",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "breakpointToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "prefix",
-          "name": "Prefix",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "bg",
-                "text",
-                "fill",
-                "decoration",
-                "border",
-                "outline",
-                "shadow",
-                "ring",
-                "accent",
-                "stroke"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "family",
-          "name": "Family",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "slate",
-                "gray",
-                "zinc",
-                "neutral",
-                "stone",
-                "red",
-                "orange",
-                "amber",
-                "yellow",
-                "lime",
-                "green",
-                "emerald",
-                "teal",
-                "cyan",
-                "sky",
-                "blue",
-                "indigo",
-                "violet",
-                "purple",
-                "fuchsia",
-                "pink",
-                "rose"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "shade",
-          "name": "Shade",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "in": [
-                "50",
-                "100",
-                "200",
-                "300",
-                "400",
-                "500",
-                "600",
-                "700",
-                "800",
-                "900"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "opacity",
-          "name": "Opacity",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "opacityToken"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "whywicumr0iw"
+            "id": "8g9vc93je04m"
           }
         },
         "id": "styleBackground",
         "type": "ContentType",
-        "createdAt": "2025-06-08T18:25:29.268Z",
-        "updatedAt": "2025-06-08T18:57:00.277Z",
+        "createdAt": "2025-06-14T23:58:06.903Z",
+        "updatedAt": "2025-06-22T17:50:01.378Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1659,33 +1150,33 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 12,
-        "publishedAt": "2025-06-08T18:57:00.277Z",
-        "firstPublishedAt": "2025-06-08T18:25:40.299Z",
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:01.378Z",
+        "firstPublishedAt": "2025-06-14T23:58:13.054Z",
         "createdBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
         "updatedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "publishedCounter": 6,
-        "version": 13,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
-            "id": "7K4yqIuG80oFhDJR9PZF5x"
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
           }
         },
-        "urn": "crn:contentful:::content:spaces/whywicumr0iw/environments/master/content_types/styleBackground"
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/styleBackground"
       },
       "displayField": "title",
       "name": "Style - Background",
@@ -1881,6 +1372,599 @@
           "linkType": "Asset"
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "styleColor",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:06.972Z",
+        "updatedAt": "2025-06-27T17:20:37.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2025-06-27T17:20:37.116Z",
+        "firstPublishedAt": "2025-06-14T23:58:12.684Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/styleColor"
+      },
+      "displayField": "title",
+      "name": "Style - Color",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpoint",
+          "name": "Breakpoint",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "breakpointToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "prefix",
+          "name": "Prefix",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "bg",
+                "text",
+                "fill",
+                "decoration",
+                "border",
+                "outline",
+                "shadow",
+                "ring",
+                "accent",
+                "stroke"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "family",
+          "name": "Family",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "white",
+                "black",
+                "slate",
+                "gray",
+                "zinc",
+                "neutral",
+                "stone",
+                "red",
+                "orange",
+                "amber",
+                "yellow",
+                "lime",
+                "green",
+                "emerald",
+                "teal",
+                "cyan",
+                "sky",
+                "blue",
+                "indigo",
+                "violet",
+                "purple",
+                "fuchsia",
+                "pink",
+                "rose"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shade",
+          "name": "Shade",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "50",
+                "100",
+                "200",
+                "300",
+                "400",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "opacity",
+          "name": "Opacity",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "opacityToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "layout",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:06.987Z",
+        "updatedAt": "2025-06-22T17:50:02.163Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:02.163Z",
+        "firstPublishedAt": "2025-06-14T23:58:11.554Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/layout"
+      },
+      "displayField": "name",
+      "name": "Layout",
+      "description": null,
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "spacing",
+          "name": "Spacing",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutSpacing"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutPosition"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "flow",
+          "name": "Flow",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutFlow"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "grid",
+          "name": "Grid",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "layoutGrid"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "border",
+          "name": "Border",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "styleBorder"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "color",
+          "name": "Color",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "styleColor"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "shadow",
+          "name": "Shadow",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "styleShadow"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "customizationData",
+          "name": "Customization Data",
+          "type": "Object",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "styleShadow",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:07.002Z",
+        "updatedAt": "2025-06-22T17:50:02.522Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:02.522Z",
+        "firstPublishedAt": "2025-06-14T23:58:11.947Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/styleShadow"
+      },
+      "displayField": "title",
+      "name": "Style - Shadow",
+      "description": null,
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "breakpoint",
+          "name": "Breakpoint",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "breakpointToken"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "value",
+          "name": "Shadow",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "sm",
+                "md",
+                "lg",
+                "xl",
+                "2xl",
+                "inner",
+                "none"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8g9vc93je04m"
+          }
+        },
+        "id": "person",
+        "type": "ContentType",
+        "createdAt": "2025-06-14T23:58:07.835Z",
+        "updatedAt": "2025-06-22T17:50:02.917Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2025-06-22T17:50:02.917Z",
+        "firstPublishedAt": "2025-06-14T23:58:14.484Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/8g9vc93je04m/environments/master/content_types/person"
+      },
+      "displayField": "name",
+      "name": "Person",
+      "description": "Learders, authors, artists...",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "editorInterfaces": [
@@ -1890,24 +1974,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T04:00:20.946Z",
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:08.767Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:32:10.619Z",
+        "updatedAt": "2025-06-22T17:50:05.882Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -1941,24 +2025,95 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 9,
+        "createdAt": "2025-06-14T23:58:10.574Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-09-06T22:18:46.697Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layoutPosition",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpoint",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "prefix",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "negative",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "measurement",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
         "version": 10,
-        "createdAt": "2025-06-08T04:00:14.430Z",
+        "createdAt": "2025-06-14T23:58:09.163Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-09T03:11:51.915Z",
+        "updatedAt": "2025-06-27T18:53:14.333Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -1992,24 +2147,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T04:00:06.936Z",
+        "version": 8,
+        "createdAt": "2025-06-14T23:58:09.569Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:32:01.113Z",
+        "updatedAt": "2025-06-22T17:50:05.874Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -2043,24 +2198,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:38.331Z",
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:10.109Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:31:40.743Z",
+        "updatedAt": "2025-06-22T17:50:05.869Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -2114,100 +2269,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:33.638Z",
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:10.963Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:31:35.789Z",
+        "updatedAt": "2025-06-22T17:50:06.887Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutPosition",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "breakpoint",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "prefix",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "negative",
-          "widgetId": "boolean",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "measurement",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "float",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "whywicumr0iw",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 10,
-        "createdAt": "2025-06-08T03:59:28.847Z",
-        "createdBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-09T03:16:03.039Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -2264,257 +2343,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:24.298Z",
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:12.481Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:31:27.069Z",
+        "updatedAt": "2025-06-22T17:50:06.886Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layoutFlow",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "breakpoint",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "display",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignPrefix",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "alignValue",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "overflowPrefix",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "overflowValue",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "order",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "whywicumr0iw",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:18.715Z",
-        "createdBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-08T04:31:21.917Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "layout",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "spacing",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "position",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "flow",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "grid",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "border",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "color",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "shadow",
-          "widgetId": "entryLinksEditor",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "whywicumr0iw",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:57.861Z",
-        "createdBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-08T04:31:56.042Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "styleShadow",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "breakpoint",
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "value",
-          "widgetId": "dropdown",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "whywicumr0iw",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:46.179Z",
-        "createdBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2025-06-08T04:31:46.069Z",
-        "updatedBy": {
-          "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -2563,31 +2409,31 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2025-06-08T03:59:51.223Z",
+        "version": 16,
+        "createdAt": "2025-06-14T23:58:11.340Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T04:31:51.384Z",
+        "updatedAt": "2025-09-06T21:19:33.236Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
         "contentType": {
           "sys": {
-            "id": "styleColor",
+            "id": "layoutFlow",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -2612,23 +2458,38 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "prefix",
+          "fieldId": "display",
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "family",
+          "fieldId": "containerFlow",
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "shade",
+          "fieldId": "alignPrefix",
           "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "opacity",
-          "widgetId": "entryLinkEditor",
+          "fieldId": "alignValue",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "overflowPrefix",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "overflowValue",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "order",
+          "widgetId": "dropdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -2639,24 +2500,24 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "whywicumr0iw",
+            "id": "8g9vc93je04m",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 12,
-        "createdAt": "2025-06-08T18:25:40.462Z",
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:13.220Z",
         "createdBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
         },
-        "updatedAt": "2025-06-08T18:57:01.169Z",
+        "updatedAt": "2025-06-22T17:50:06.899Z",
         "updatedBy": {
           "sys": {
-            "id": "7K4yqIuG80oFhDJR9PZF5x",
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
             "type": "Link",
             "linkType": "User"
           }
@@ -2749,6 +2610,288 @@
         {
           "fieldId": "asset",
           "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2025-06-14T23:58:12.846Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-27T17:20:37.635Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "styleColor",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpoint",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "prefix",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "family",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shade",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "opacity",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:11.727Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-22T17:50:06.890Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "layout",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "spacing",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "position",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "flow",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "grid",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "border",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "color",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "shadow",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customizationData",
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:12.102Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-22T17:50:07.896Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "styleShadow",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "breakpoint",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "value",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8g9vc93je04m",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2025-06-14T23:58:14.586Z",
+        "createdBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2025-06-22T17:50:07.878Z",
+        "updatedBy": {
+          "sys": {
+            "id": "69tH2XbtNYs4Xbvwdhhs0a",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "person",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "settings": {
+            "helpText": "Person’s full name"
+          },
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
