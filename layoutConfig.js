@@ -128,15 +128,16 @@ const mapPosition = atom => ({
  * @param {AtomFields} atom
  * @returns {{ breakpoint: string, parts: string[] }[]}
  */
-const mapFlow = ({
-    alignPrefix,
-    alignValue,
-    containerFlow,
-    display,
-    order,
-    overflowPrefix,
-    overflowValue
-}) => {
+const mapFlow = (atom) => {
+    const {
+        alignPrefix,
+        alignValue,
+        containerFlow,
+        display,
+        order,
+        overflowPrefix,
+        overflowValue
+    } = atom
     const breakpoint = extractBreakpoint(atom);
     const flowClasses = [
         display,
